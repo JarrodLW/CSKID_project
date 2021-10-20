@@ -1,0 +1,335 @@
+%%%%%%%
+%%%%%%% Conformal twistor KIDs
+%%%%%%% 
+%%%%%%%
+%%%%%%% 
+%%%%%%%
+%%%%%%% Started on: 26.05.2019
+%%%%%%% 
+%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{latexsym}
+\usepackage{mathrsfs}
+\usepackage{stmaryrd}
+\usepackage[dvips]{epsfig}
+\usepackage{setspace}
+\usepackage{float}
+\usepackage{bm}
+%\usepackage{showkeys}
+%\usepackage[pdftex]{graphicx}
+\usepackage{tikz}
+\usepackage{enumerate}
+\usepackage{subfigure}
+\usepackage{nomencl}
+%\usepackage{makeidx} 
+%\makeindex
+\usepackage{authblk}
+\renewcommand\Affilfont{\itshape\small}
+\usepackage{textcomp}
+\usepackage{scrextend}% add KOMA-Script features to other classes
+\usepackage[toc,page]{appendix}
+
+%\usepackage[utf8]{inputenc}
+%\usepackage[LGR,T1]{fontenc}
+%\newcommand\Koppa{\begingroup\fontencoding{LGR}\selectfont\char21\endgroup}
+
+\theoremstyle{plain}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{theorem}{Theorem}
+\newtheorem{assumption}{Assumption}
+\newtheorem*{conjecture}{Conjecture}
+\newtheorem*{subconjecture}{Subconjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem*{main}{Theorem}
+\newtheorem{definition}{Definition}
+\newtheorem{remark}{Remark}
+
+\setlength{\textwidth}{148mm}           % Width of text on page- max 148
+\setlength{\textheight}{235mm}          % height of text on page-max 235
+\setlength{\topmargin}{-10mm}            % Margin at top ofpage- max -5
+\setlength{\oddsidemargin}{0mm}         % Odd page sidemargin max 15
+\setlength{\evensidemargin}{0mm}
+
+% Underlined lowcase latin letters
+\def\es{{\bar{s}}}
+\def\er{{\bar{r}}}
+
+% Boldface mathmode lowcase latin letters
+\def\bma{{\bm a}}
+\def\bmb{{\bm b}}
+\def\bmc{{\bm c}}
+\def\bmd{{\bm d}}
+\def\bme{{\bm e}}
+\def\bmf{{\bm f}}
+\def\bmg{{\bm g}}
+\def\bmh{{\bm h}}
+\def\bmi{{\bm i}}
+\def\bmj{{\bm j}}
+\def\bmk{{\bm k}}
+\def\bml{{\bm l}}
+\def\bmn{{\bm n}}
+\def\bmm{{\bm m}}
+\def\bmo{{\bm o}}
+\def\bmq{{\bm q}}
+\def\bms{{\bm s}}
+\def\bmt{{\bm t}}
+\def\bmu{{\bm u}}
+\def\bmv{{\bm v}}
+\def\bmw{{\bm w}}
+\def\bmx{{\bm x}}
+\def\bmy{{\bm y}}
+\def\bmz{{\bm z}}
+
+% Boldface mathmode numbers
+\def\bmzero{{\bm 0}}
+\def\bmone{{\bm 1}}
+\def\bmtwo{{\bm 2}}
+\def\bmthree{{\bm 3}}
+
+% Boldface mathmode uppercase latin letters
+\def\bmA{{\bm A}}
+\def\bmB{{\bm B}}
+\def\bmC{{\bm C}}
+\def\bmD{{\bm D}}
+\def\bmE{{\bm E}}
+\def\bmF{{\bm F}}
+\def\bmG{{\bm G}}
+\def\bmH{{\bm H}}
+\def\bmK{{\bm K}}
+\def\bmL{{\bm L}}
+\def\bmM{{\bm M}}
+\def\bmN{{\bm N}}
+\def\bmP{{\bm P}}
+\def\bmQ{{\bm Q}}
+\def\bmR{{\bm R}}
+\def\bmS{{\bm S}}
+\def\bmT{{\bm T}}
+\def\bmX{{\bm X}}
+\def\bmZ{{\bm Z}}
+
+
+\def\Riem{{\bm R}{\bm i}{\bm e}{\bm m}}
+\def\Ric{{\bm R}{\bm i}{\bm c}}
+\def\Weyl{{\bm W}{\bm e}{\bm y}{\bm l}}
+\def\RWeyl{{\bm R}{\bm W}{\bm e}{\bm y}{\bm l}}
+\def\Sch{{\bm S}{\bmc}{\bm h}}
+\def\Schouten{{\bm S}{\bmc}{\bm h}{\bm o}{\bm u}{\bm t}{\bm e}{\bm n}}
+\def\Hessian{{\bm H}{\bm e}{\bm s}{\bm s}}
+
+% Fracture letters
+\def\fraka{{\frak a}}
+\def\frakb{{\frak b}}
+\def\frakc{{\frak c}}
+\def\frakd{{\frak d}}
+\def\frakf{{\frak f}}
+\def\frakg{{\frak g}}
+\def\fraki{{\frak i}}
+\def\frakj{{\frak j}}
+\def\frakk{{\frak k}}
+
+% Mathbf letters
+\def\mbfu{\mathbf{u}}
+
+% Boldface mathmode lowcase latin letters
+\def\bma{{\bm a}}
+\def\bmb{{\bm b}}
+\def\bmc{{\bm c}}
+\def\bmd{{\bm d}}
+\def\bme{{\bm e}}
+\def\bmf{{\bm f}}
+\def\bmg{{\bm g}}
+\def\bmh{{\bm h}}
+\def\bmi{{\bm i}}
+\def\bmj{{\bm j}}
+\def\bmk{{\bm k}}
+\def\bml{{\bm l}}
+\def\bmn{{\bm n}}
+\def\bmm{{\bm m}}
+\def\bmo{{\bm o}}
+\def\bmq{{\bm q}}
+\def\bmr{{\bm r}}
+\def\bms{{\bm s}}
+\def\bmt{{\bm t}}
+\def\bmu{{\bm u}}
+\def\bmv{{\bm v}}
+\def\bmw{{\bm w}}
+\def\bmx{{\bm x}}
+\def\bmy{{\bm y}}
+\def\bmz{{\bm z}}
+\def\bmJ{{\bm J}}
+
+% Boldface mathmode numbers
+\def\bmzero{{\bm 0}}
+\def\bmone{{\bm 1}}
+\def\bmtwo{{\bm 2}}
+\def\bmthree{{\bm 3}}
+
+% Boldface mathmode uppercase latin letters
+\def\bmA{{\bm A}}
+\def\bmB{{\bm B}}
+\def\bmC{{\bm C}}
+\def\bmD{{\bm D}}
+\def\bmE{{\bm E}}
+\def\bmF{{\bm F}}
+\def\bmG{{\bm G}}
+\def\bmH{{\bm H}}
+\def\bmK{{\bm K}}
+\def\bmL{{\bm L}}
+\def\bmM{{\bm M}}
+\def\bmN{{\bm N}}
+\def\bmP{{\bm P}}
+\def\bmQ{{\bm Q}}
+\def\bmR{{\bm R}}
+\def\bmS{{\bm S}}
+\def\bmT{{\bm T}}
+\def\bmU{{\bm U}}
+\def\bmV{{\bm V}}
+\def\bmW{{\bm W}}
+\def\bmX{{\bm X}}
+\def\bmY{{\bm Y}}
+\def\bmZ{{\bm Z}}
+
+
+% Boldface mathmode lowcase greek letters
+\def\bmalpha{{\bm \alpha}}
+\def\bmbeta{{\bm \beta}}
+\def\bmgamma{{\bm \gamma}}
+\def\bmdelta{{\bm \delta}}
+\def\bmepsilon{{\bm \epsilon}}
+\def\bmeta{{\bm \eta}}
+\def\bmzeta{{\bm\zeta}}
+\def\bmxi{{\bm \xi}}
+\def\bmchi{{\bm \chi}}
+\def\bmiota{{\bm \iota}}
+\def\bmomega{{\bm \omega}}
+\def\bmlambda{{\bm \lambda}}
+\def\bmmu{{\bm \mu}}
+\def\bmnu{{\bm \nu}}
+\def\bmphi{{\bm \phi}}
+\def\bmvarphi{{\bm \varphi}}
+\def\bmsigma{{\bm \sigma}}
+\def\bmvarsigma{{\bm \varsigma}}
+\def\bmtau{{\bm \tau}}
+\def\bmupsilon{{\bm \upsilon}}
+
+% Boldface mathmode uppercase greek letters
+\def\bmGamma{{\bm \Gamma}}
+\def\bmPhi{{\bm \Phi}}
+\def\bmUpsilon{{\bm \Upsilon}}
+\def\bmSigma{{\bm \Sigma}}
+
+% Boldface operators
+\def\bmpartial{{\bm \partial}}
+\def\bmnabla{{\bm \nabla}}
+\def\bmhbar{{\bm \hbar}}
+\def\bmperp{{\bm \perp}}
+\def\bmell{{\bm \ell}}
+
+% Complex and real numbers
+\font\SYM=msbm10
+\newcommand{\Real}{\mbox{\SYM R}}
+\newcommand{\Complex}{\mbox{\SYM C}}
+\newcommand{\Natural}{\mbox{\SYM N}}
+\newcommand{\Integer}{\mbox{\SYM Z}}
+\newcommand{\Sphere}{\mbox{\SYM S}}
+
+
+% ParallelPerp symbol
+\newcommand{\parperp}{\mathbin{\text{\rotatebox[origin=c]{90}{$\models$}}}}
+\newcommand{\perppar}{\mathbin{\text{\rotatebox[origin=c]{-90}{$\models$}}}}
+
+% Projector symbols
+%\newcommand{\proj2perp}{\pi^{\small{\perp}}}
+%\newcommand{\proj2par}{\pi^{\small{\parallel}}}
+%\newcommand{\proj4par}{\pi^{\small{\parallel}}}
+%\newcommand{\proj4parperp}{\pi^{\small{\parperp}}}
+%\newcommand{\proj4perppar}{\pi^{\small{\perppar}}}
+%\newcommand{\proj4perp}{\pi^{\small{\perp}}}
+
+%Counter variable for the margin notes
+\newcounter{mnotecount}%[section]
+
+\usepackage{cancel}
+
+% This code generates the margin notes
+\newcommand{\mnotex}[1]%{}
+{\protect{\stepcounter{mnotecount}}$^{\mbox{\footnotesize $\bullet$\themnotecount}}$ 
+\marginpar{%\color{red}%
+\raggedright\tiny\em
+$\!\!\!\!\!\!\,\bullet$\themnotecount: #1} }
+
+\renewcommand\labelitemi{\tiny$\bullet$}
+
+\begin{document}
+
+\title{\textbf{Conformal twistor KIDs}}
+
+\author[,1]{E. Gasper\'{i}n \footnote{E-mail address:{\tt
+      edgar.gasperin@tecnico.ulisboa.pt}}}
+\author[,2]{J.L. Williams \footnote{E-mail address:{\tt jlw31@bath.ac.uk}}}
+%\author[1]{Con T. Ributor}
+%\affil[1]{Autodesk Research?}
+\affil[1]{Instituto Superior T\'{e}cnico }
+\affil[2]{Department of Mathematical Sciences, University of Bath, Claverton Down, Bath BA2 7AY, United Kingdom.}
+
+\maketitle
+\begin{abstract}
+    Write-up of Edgar's twistor KID calculations from the new notebook. 
+\end{abstract}
+
+\section{Definitions}
+
+We are interested here in the twistor equation:
+\[\nabla_{A'(A}\kappa_{B)}=0, \]
+encoded in the vanishing of the \textit{zero quantity} $H_{A'AB}:=2\nabla_{A'(A}\kappa_{B)}$. It will prove useful to define the auxiliary quantity
+\[\xi_{A'}:= \nabla^A{}_{A'}\kappa_A. \]
+We also define the zero quantity $S_{A'B'A}:=\nabla_{QA'}H_{B'A}{}^Q.$ This may be expressed alternatively in terms of the auxiliary field\mnotex{I think we should change the sign in either the definition of $S$ or $\xi$, to be more consistent. } $\xi_{A'}$, by an easy computation, as follows:
+\begin{equation}
+S_{A'B'A} = -\nabla_{AB'}\xi_{A'} + 2\Lambda \epsilon_{A'B'}\kappa_A - 2\Phi_{AQA'B'}\kappa^Q. \label{Eq:SZeroQuantityInTermsOfXi}
+\end{equation}
+The other (symmetrised) contraction yields the \textit{Buchdahl constraint}:
+\[0 = \nabla_{(A}{}^{A'}H_{\vert A'\vert BC)} = \Psi_{ABCD}\kappa^D, \]
+though this won't feature in the calculations here. 
+
+\section{Wave equations}
+
+\subsection{For the twistor fields}
+
+A short computation shows that 
+\[\square \kappa_B = -2\Lambda \kappa_B + \tfrac{2}{3}\nabla^{AA'}H_{A'AB}. \]
+Hence, if $\kappa_B$ solves the twistor equation, then it necessarily satisfies the wave equation 
+\begin{equation}
+    \square \kappa_B + 2\Lambda \kappa_B = 0. \label{Eq:WaveEqForKappa}
+\end{equation}
+We will choose to propagate a twistor candidate according to this equation. It is maybe worth noticing that $S_{A'}{}^{A'}{}_B=\nabla^{AA'}H_{A'AB}$. Hence, if $\kappa_A$ satisfies \eqref{Eq:WaveEqForKappa}, then necessarily $S_{A'B'A} = S_{(A'B')A}$, since it is assured that $\nabla^{AA'}H_{A'AB}=0$. 
+\\
+
+We will also need a wave equation for the auxiliary field $\xi_{A'}$. To get this, take the contracted derivative of \eqref{Eq:WaveEqForKappa} and commute derivatives, finally resulting in 
+\begin{equation}
+    \square \xi_{A'} + 2\Lambda \xi_{A'} - 8(\nabla_{AA'}\Lambda)\kappa^A = 0. \label{Eq:WaveEqForXi}
+\end{equation}
+Again, if $\kappa_A$ is a twistor, then the resulting $\xi_{A'}$ solves \eqref{Eq:WaveEqForXi}. Given a twistor candidate and its corresponding $\xi_{A'}$, we choose to propagate the latter according to this wave equation. 
+
+\subsection{For the zero quantities}
+
+In order to derive wave equations for the zero quantities, we assume that twistor candidate, $\kappa_A$ and its auxiliary spinor $\xi_{A'}$ satisfy the wave equations \eqref{Eq:WaveEqForKappa}--\eqref{Eq:WaveEqForXi}; at the end of the day, these will be satisfied by construction, since the candidate quantities will be propagated off the initial hypersurface using these wave equations.  
+\\
+
+To get a wave equation for $H_{A'AB}$, simply take the definition of $\bmS$ in terms of $\bmH$ and take a contracted derivative ---i.e. consider $\nabla_{A}{}^{D'}S_{D'A'B}$. Ultimately, we get
+\[\square H_{A'AB} = 8\Lambda H_{A'AB} - 2\Psi_{ABCD}H_{A'}{}^{CD} - 2\Phi_{ADA'D'}H^{D'D}{}_B - 2\nabla_{AD'}S^{D'}{}_{A'B}.\]
+It is important to note that the this is expressible (in a regular way) in terms of the rescaled Weyl spinor $\phi_{ABCD} = \Theta^{-1}\Psi_{ABCD}$:
+\[\square H_{A'AB} = 8\Lambda H_{A'AB} - 2\Theta\phi_{ABCD}H_{A'}{}^{CD} - 2\Phi_{ADA'D'}H^{D'D}{}_B - 2\nabla_{AD'}S^{D'}{}_{A'B}.\]
+To close the system, we need a wave equation for $S_{A'B'A}$. To get this, we will apply the D'Alembertian to \eqref{Eq:SZeroQuantityInTermsOfXi}, commute derivatives, and substitute the wave equation for $\xi_{A'}$, equation \eqref{Eq:WaveEqForXi}. Finally, we arrive at\mnotex{Is it possible to simplify this a bit more?}
+\begin{multline}\square S_{A'B'A} = 6\Lambda S_{A'B'A} - 4\Phi_{ABC'(A'}S_{B'}{}^{C'B} - 2\Theta \bar{\phi}_{A'B'C'D'}S^{C'D'}{}_A \\- \tfrac{2}{3}\Phi_{BCA'B'}(\nabla_{AC'}H^{C'BC}+2\nabla^C{}_{C'}H^{C'}{}_A{}^B) \\+ 4H_{(A'\vert AB\vert}\nabla^B{}_{B')}\Lambda - 2(\nabla_{CC'}\Phi_{ABA'B'})H^{C'BC}.
+\end{multline}
+Note that the terms on the right-hand-side are homogeneous in $\bmS,~\bmH$ and $\nabla\bmH$.
+
+\section{What goes wrong in the higher-valence case?}
+
+\end{document}
