@@ -323,13 +323,34 @@ In order to derive wave equations for the zero quantities, we assume that twisto
 
 To get a wave equation for $H_{A'AB}$, simply take the definition of $\bmS$ in terms of $\bmH$ and take a contracted derivative ---i.e. consider $\nabla_{A}{}^{D'}S_{D'A'B}$. Ultimately, we get
 \[\square H_{A'AB} = 8\Lambda H_{A'AB} - 2\Psi_{ABCD}H_{A'}{}^{CD} - 2\Phi_{ADA'D'}H^{D'D}{}_B - 2\nabla_{AD'}S^{D'}{}_{A'B}.\]
-It is important to note that the this is expressible (in a regular way) in terms of the rescaled Weyl spinor $\phi_{ABCD} = \Theta^{-1}\Psi_{ABCD}$:
+It is important to note that this is expressible (in a regular way) in terms of the rescaled Weyl spinor $\phi_{ABCD} = \Theta^{-1}\Psi_{ABCD}$:
 \[\square H_{A'AB} = 8\Lambda H_{A'AB} - 2\Theta\phi_{ABCD}H_{A'}{}^{CD} - 2\Phi_{ADA'D'}H^{D'D}{}_B - 2\nabla_{AD'}S^{D'}{}_{A'B}.\]
 To close the system, we need a wave equation for $S_{A'B'A}$. To get this, we will apply the D'Alembertian to \eqref{Eq:SZeroQuantityInTermsOfXi}, commute derivatives, and substitute the wave equation for $\xi_{A'}$, equation \eqref{Eq:WaveEqForXi}. Finally, we arrive at\mnotex{Is it possible to simplify this a bit more?}
-\begin{multline}\square S_{A'B'A} = 6\Lambda S_{A'B'A} - 4\Phi_{ABC'(A'}S_{B'}{}^{C'B} - 2\Theta \bar{\phi}_{A'B'C'D'}S^{C'D'}{}_A \\- \tfrac{2}{3}\Phi_{BCA'B'}(\nabla_{AC'}H^{C'BC}+2\nabla^C{}_{C'}H^{C'}{}_A{}^B) \\+ 4H_{(A'\vert AB\vert}\nabla^B{}_{B')}\Lambda - 2(\nabla_{CC'}\Phi_{ABA'B'})H^{C'BC}.
+\begin{multline}\square S_{A'B'A} = 6\Lambda S_{A'B'A} - 4\Phi_{ABC'(A'}S_{B')}{}^{C'B} - 2\Theta \bar{\phi}_{A'B'C'D'}S^{C'D'}{}_A \\- \tfrac{2}{3}\Phi_{BCA'B'}(\nabla_{AC'}H^{C'BC}+2\nabla^C{}_{C'}H^{C'}{}_A{}^B) \\+ 4H_{(A'\vert AB\vert}\nabla^B{}_{B')}\Lambda - 2(\nabla_{CC'}\Phi_{ABA'B'})H^{C'BC}.
 \end{multline}
 Note that the terms on the right-hand-side are homogeneous in $\bmS,~\bmH$ and $\nabla\bmH$.
 
 \section{What goes wrong in the higher-valence case?}
+
+Define also the ``Buchdahl zero quantity":
+\[ B_{ABCD} = \phi_{F(ABC}\kappa_{D)}}{}^F.\]
+Note that 
+\[\nabla_{(A}{}^{A'}H_{\vertA'\vert BCD)} = 6\Theta B_{ABCD} \]
+Can derive equations of the form
+\begin{eqnarray}
+    && \square H_{A'ABC} = (\bmH, \nabla\bmS),\\
+    && \square H_{A'ABC} = (\bmH, \bmB, \nabla\bmB),\\
+    && \square S_{AA'BB'} = (\bmH, \bmS, \Theta\bmB, \nabla\Theta\cdot\nabla\bmB) = (\bmH, \bmS, \nabla\bmH, \nabla\Theta\cdot\nabla\bmB),\\
+    && \square B_{ABCD} = (\bmH, \bmB) + \tfrac{2}{3}\nabla_{\bm\xi}\phi_{ABCD} = (\bmH, \bmB) + \tfrac{2}{3}\mathcal{L}_{\bm\xi}\phi_{ABCD}.\label{Eq:TempEqForBuchdahl}
+\end{eqnarray}
+The final equality follows from the fact that $\nabla_{(A}{}^{A'}\xi_{B)A'}=0$, as a consequence of the assumed wave equation for $\kappa_{AB}$.\mnotex{Generally speaking, do we need to worry about the fact that $\kappa_{AB},\xi_{AA'}$ are being propagated independently (though consistently)?}
+\\
+
+\textbf{Note}: In the equation for $\bmS$, we couldn't replace the $\nabla \bmB$ with $\nabla\nabla\bmH$ terms even if we wanted to, because then we would have $\Theta^{-1}$ factors appearing. 
+\\
+
+\textbf{Proposal:} Define $F_{A'BCD}:=\nabla^A{}_{A'}B_{ABCD}$. Then we get a wave equation for $B$ trivially:
+\[\square B_{ABCD} \propto \nabla_{(A}{}^{A'}F_{\vert A'\vert BCD)} + \text{curv.}\times \bmB. \]
+To get the remaining equation for $F_{A'BCD}$ take a contracted derivative of \eqref{Eq:TempEqForBuchdahl}, commute derivatives on the $\nabla_{\bm\xi}\bm\phi$ term and use the fact that $\nabla^A{}_{A'}\phi_{ABCD}=0.$
 
 \end{document}
