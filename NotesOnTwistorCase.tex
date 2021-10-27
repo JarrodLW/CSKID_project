@@ -353,4 +353,38 @@ The final equality follows from the fact that $\nabla_{(A}{}^{A'}\xi_{B)A'}=0$, 
 \[\square B_{ABCD} \propto \nabla_{(A}{}^{A'}F_{\vert A'\vert BCD)} + \text{curv.}\times \bmB. \]
 To get the remaining equation for $F_{A'BCD}$ take a contracted derivative of \eqref{Eq:TempEqForBuchdahl}, commute derivatives on the $\nabla_{\bm\xi}\bm\phi$ term and use the fact that $\nabla^A{}_{A'}\phi_{ABCD}=0.$
 
+\section{A closed system for the Killing spinor case}
+
+Zero quantities:
+\[H_{A'ABC}, \qquad B_{ABCD}, \qquad F_{A'BCD}:=\nabla^A{}_{A'}B_{ABCD} \]
+From the previous section, $\nabla_{(A}{}^{A'}H_{\vertA'\vert BCD)} = 6\Theta B_{ABCD}$. Additionaly, the wave equation for $\kappa_{AB}$ is equivalent to $\nabla^{AA'}H_{A'ABC}=0$, hence we have $\nabla_{A}{}^{A'}H_{A'BCD} = 6\Theta B_{ABCD}$. Contracting with $\nabla^A{}_{B'}$ we then derive the following wave equation:
+\begin{equation}
+    \square H_{A'ABC} = ...
+\end{equation}
+Similarly, substituting the definition of $F_{A'ABC}$ in terms of $B_{ABCD}$, it is straightforward to verify the following wave equation for $B_{ABCD}$: 
+\begin{equation}
+     \square B_{ABCD} = 12\Lambda B_{ABCD} - 6\Theta \phi_{(AB}{}^{FG}B_{CD)FG} + 2\nabla_{AA'}F^{A'}{}_{BCD}. \label{Eq:FirstWaveEqForB}
+\end{equation}
+The task remaining is to derive a wave equation for $F_{A'ABC}$. Let us first consider some useful identities:
+\begin{align}
+     \kappa^{DG}\phi_{(ABC}{}^H\phi_{F)HDG}&=\kappa_A{}^D\phi_{(BC}{}^{GH}\phi_{FD)GH}+\kappa_B{}^D\phi_{(AC}{}^{GH}\phi_{FD)GH}\nonumber\\
+    &+\kappa_C{}^D\phi_{(AB}{}^{GH}\phi_{FD)GH}+\kappa_F{}^D\phi_{(BC}{}^{GH}\phi_{AD)GH} \nonumber\\
+    & =2\phi_{(AB}{}^{GH}B_{CF)GH}
+\end{align}
+Using this identity, we can derive the following alternative (non-homogeneous) wave equation for $B_{ABCD}$:
+\begin{equation}
+    \square B_{ABCD} = \tfrac{2}{3}\nabla_{\bm\xi}\phi_{ABCD} + 8\Lambda B_{ABCD} - 14\Theta \phi_{(AB}{}^{FG}B_{CD)FG} + \tfrac{2}{3}(\nabla_{FA'}\phi_{G(ABC})H^{A'}{}_{D)}{}^{FG}\label{Eq:SecondWaveEqForB}
+\end{equation}
+where, for convenience, we have defined $\xi_{AA'}:=\nabla^B{}_{A'}\kappa_{AB}$, as usual. Contrary to previous approaches, however, we won't propagate $\xi_{AA'}$ independently of $\kappa_{AB}$; it is simply a convenient shorthand. 
+\begin{remark}{\em}
+As an aside, note that \eqref{Eq:SecondWaveEqForB} expresses the fact that, \textbf{given a Killing spinor} $\kappa_{AB}$, the quantity 
+\[\mathcal{L}_{\bm\xi}\phi_{ABCD}\equiv \nabla_{\bm\xi}\phi_{ABCD} + \phi_{F(ABC}\nabla_{D)A'}\xi^{FA'} = \nabla_{\bm\xi}\phi_{ABCD} \]
+---the equality being by virtue of the wave equation for $\kappa_{AB}$--- vanishes, and in particular that in the physical spacetime the Lie derivative of the Weyl curvature along the Killing vector $\tilde{\bm\xi}$ vanishes, as we know should be the case.}
+\end{remark}
+
+At this point we note that there are no derivatives of zero quantities appearing on the right-hand-side of \eqref{Eq:SecondWaveEqForB}. This, combined with the fact that $\nabla^A{}_{A'}\phi_{ABCD}=0$, makes it seems plausible that by applying $\nabla^A{}_{A'}$ to \eqref{Eq:SecondWaveEqForB} we will be able to derive a wave equation for $F_{A'BCD}$. We will see that this does indeed work; the only essential difficulty is in showing that $\nabla^A{}_{A'}\nabla_{\bm\xi}\phi_{ABCD}$ is expressible in terms of the zero quantities $\bmH, \bmB, \bmF$ and their first derivatives only. This is done in the following identity: 
+\begin{equation}
+    \nabla^A{}_{A'}\nabla_{\bm\xi}\phi_{ABCD} = 
+\end{equation}
+
 \end{document}
