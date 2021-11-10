@@ -526,7 +526,8 @@ the conformal Killing spinor initial data equations
 % % spinor are presented ---see Proposition
 % % \ref{PropositionRestrictionOnCotton}.
 
-\subsection*{Notation and conventions}
+ \subsection*{Notation and conventions}
+ %\section{Spinor formalism in a nutshell}
 Upper case Latin indices ~$_{ABC\cdots A'B'C'}$~ will be used as
 abstract indices of the \emph{spacetime spinor} algebra, and the bold
 numerals ~$_{\bm0\bm1\bm2\cdots}$~ denote components with respect to a
@@ -574,6 +575,85 @@ where $\Psi_{ABCD}$ and $\Phi_{AA'BB'}$ and $\Lambda$ are curvature spinors.
 \end{equation}
 where $\square_{AB}$ is the symmetric operator defined above and
 $\square \equiv \nabla_{AA'}\nabla^{AA'}.$
+
+
+\subsection*{Space spinor formalism} %\label{Subsec:DecomposedOperators}
+\label{SpaceSpinorFormalism}
+To have a self-contained discussion in this section the space spinor
+formalism, originally introduced in \cite{Som80}, is briefly recalled
+---see also \cite{GarVal08c,BaeVal10b,CFEbook}.  Let $\tau^{AA'}$
+denote the spinorial counterpart of a timelike vector $\tau^{a}$,
+normal to a spacelike hypersurface $\mathcal{S}$ and normalised so
+that $\tau_{a}\tau^{a}=2$.  Then, it follows that
+$\tau_{AA'}\tau^{AA'}=2$ and, consequently,
+\[\tau_{AA'}\tau_B{}^{A'}=\epsilon_{AB}.\]  
+The covariant derivative $\nabla_{AA'}$ is then decomposed into the
+\emph{normal} and \emph{Sen} derivatives:
+\begin{align*}
+& \mathcal{P}\equiv \tau^{AA'}\nabla_{AA'},\\ & \mathcal{D}_{AB}\equiv
+  \tau_{(A}{}^{A'}\nabla_{B)A'}.
+\end{align*}
+The \emph{Weingarten} spinor and the \emph{acceleration} of the
+congruence are then defined by
+\begin{align*}
+& K_{ABCD} \equiv \tau_{D}{}^{C'} \mathcal{D}_{AB}\tau_{CC'},\\ &
+  K_{AB} \equiv \tau_{B}{}^{C'} \mathcal{P}\tau_{AC'}.
+\end{align*}
+The above can be inverted to obtain the following formulae which will
+prove useful in the sequel
+\begin{align*}
+& \mathcal{P} \tau_{CC'}=- K_{CD} \tau^{D}{}_{C'},\\ &
+  \mathcal{D}_{AB}\tau_{CA'} = - K_{ABCD} \tau^{D}{}_{A'}.
+\end{align*}
+The distribution induced by $\tau_{AA'}$ is integrable if and only
+$K^D{}_{(AB)D}=0$, in which case $K_{ABCD}$ describes the extrinsic
+curvature of the resulting foliation.
+ Nevertheless, this is not required for our subsequent discussion.
+In other words, we will allow
+ the possibility that the distribution is non-integrable
+---i.e. the spinor $ K^D{}_{(AB)D}$ will not be assumed
+to vanish. 
+
+\medskip
+
+Defining the spinors $\chi_{AB}\equiv K^D{}_{(AB)D}$,
+$\chi_{ABCD}\equiv K_{(ABCD)}$ and $\chi\equiv K_{AB}{}^{AB}$, the
+Weingarten spinor decomposes as follows
+\begin{equation}
+\label{ExtrinsicCurvatureSplit}
+K_{ABCD} = \chi_{ABCD} - \tfrac{1}{2} \epsilon_{A(C}\chi_{D)B} -
+\tfrac{1}{2} \epsilon_{B(C}\chi_{D)A} - \tfrac{1}{3} \chi
+\epsilon_{A(C} \epsilon_{D)B}.
+\end{equation}
+For the following discussion we will also need the commutators form
+with $\mathcal{P},~\mathcal{D}_{AB}$. To write these commutators in a
+succinct way, first define
+\[\widehat{\square}_{AB}\equiv \tau_A{}^{A'}\tau_B{}^{B'}\square_{A'B'}\]
+from which, proceeding analogously as in \cite{BaeVal10b}, one obtains
+\begin{align}
+ \left[\mathcal{P},\mathcal{D}_{AB}
+   \right]&=-\tfrac{1}{2}\chi_{AB}-\square_{AB}+\widehat{\square}_{AB}
++K_{(A}{}^D\mathcal{D}_{B)D}-K_{AB}{}^{FG}\mathcal{D}_{FG}, \label{CommutatorNormalSenDeriv}
+\\ \left[\mathcal{D}_{AB},\mathcal{D}_{CD}\right]&=
+\tfrac{1}{2}\left(\epsilon_{A(C}\square_{D)B}+\epsilon_{B(C}\square_{D)A}\right)
++\tfrac{1}{2}\left(\epsilon_{A(C}\widehat{\square}_{D)B}+\epsilon_{B(C}\widehat{\square}_{D)A}\right)
+ \nonumber \\ &
+ +\tfrac{1}{2}\left(K_{CDAB}\mathcal{P}-K_{ABCD}\mathcal{P}\right)
++K_{CDF(A}\mathcal{D}_{B)}{}^F-K_{ABF(C}\mathcal{D}_{D)}{}^F \label{CommutatorSenSenDeriv}
+\end{align}
+%% It will also prove convenient to decompose the tracefree Ricci spinor,
+%% $\Phi_{AA'BB'}$ in space spinor form. To do so, introduce its space
+%% spinor counterpart $\Phi_{ABCD}\equiv\tau_{B}{}^{B'} \tau_{D}{}^{D'}
+%% \Phi_{ACB'D'}$.  The latter can be decomposed as
+%% \begin{align}
+%% \label{RicciSpaceSpinorSplit}
+%% \Phi_{ABCD}& = \Theta_{ABCD} + \tfrac{1}{2}
+%% \left(\epsilon_{C(B}\Phi_{D)A} + \epsilon_{A(B}\Phi_{D)C}\right) -
+%% \tfrac{1}{3} \Phi \epsilon_{A(B}\epsilon_{D)C}
+%% \end{align}
+%% where
+%% \[ \Phi \equiv \Phi_{A}{}^{A}{}_{B}{}^{B},\qquad \Phi_{AB} \equiv \Phi_{(AB)C}{}^{C},\qquad
+%%  \Theta_{ABCD} \equiv \Phi_{(ABCD)}\]
 
 
 \section{Killing spinors}\label{Sec:KillingSpinors}
@@ -708,6 +788,11 @@ $(\tilde{\mathcal{M}},\tilde{\bmg})$ via $\bmg=\Xi^2\tilde{\bmg}$.
 ---in a slight abuse of notation $\varphi(\tilde{\mathcal{M}})$ and
 $\mathcal{M}$ will be identified so that the mapping $\varphi:
 \tilde{\mathcal{M}}\rightarrow\mathcal{M}$ can be omitted.
+
+
+
+
+
 
 
 
@@ -879,6 +964,29 @@ $\Psi_{ABCD}$. The rescaled Weyl spinor $\phi_{ABCD}$ is defined as
 %\subsection{The Conformal Einstein field equations in second order form}
 %%%%
 
+The CFEs as previously presented can be regarded as a set of covariant
+conditions for geometric fields on $(\mathcal{M},\bmg)$ and they do
+not have a particular PDE character.  However, there are, depending on
+the gauge fixing procedure, different hyperbolic reduction strategies
+to extract a set of evolution and constraint equations.
+For the subsequent discussion only the evolution and constraint equations
+implied by the $\Lambda_{CC'AB}=0$ equation will play a role.
+A direct calculation using the space spinor formalism shows that
+$\Lambda_{CC'AB}=0$ can be recasted as the following system of evolution equation and
+constraint equations
+\begin{align}\label{RescaledWeyl_evo_const}
+  %\nabla_\tau \phi _{ABCD} = -2 \mathcal{D} _{DF}\phi _{ABC}{}^{F}
+  & \nabla_\tau \phi _{ABCD} =  2 \mathcal{D} _{(A}{}^{F}\phi _{BCD)F}, % \label{RescaledWeyl_evo}\\
+  %& \qquad
+  \qquad \mathcal{D} _{CD}\phi _{AB}{}^{CD} = 0. 
+  %\label{RescaledWeyl_const}
+\end{align}
+The evolution and constraint equations associated to the
+other zero-quantities depend on the particular gauge fixing strategy
+and will not play a relevant role for the discussion in the next sections.
+
+\medskip
+
 The CFEs are usually presented as the first order system
 \eqref{vanishing_CFEs_tensorial_zq} with the definitions
 \eqref{CFE_tensor_zeroquants}, however, for several applications it is
@@ -890,11 +998,11 @@ of (tensorial) wave equations.
 %previously discussed several structural properties of the CFEs are
 %better expressed in spinorial formalism, with this motivation,
 %%%%%
-Similarly, in \cite{GasVal15} a second order form of the spinorial formulation of the CFEs
-was obtained.  This version of the CFEs is  particularly suited
-for the applications of this article, and, in fact, only one of those equations
----that for the rescaled Weyl spinor--- will be needed
-\mnotex{Double check this is true}.
+Similarly, in \cite{GasVal15} a second order form of the spinorial
+formulation of the CFEs was obtained.  This version of the CFEs is
+particularly suited for the applications of this article, and, in
+fact, only one of those equations ---that for the rescaled Weyl
+spinor--- will be needed \mnotex{Double check this is true}.
 %%%%%%%%%%%
 %Since, only not all of the equations
 %will be needed, this section presents only those which are used in the
@@ -1174,8 +1282,10 @@ $\lambda\in\mathbb{C}$. }
 %% to the development such an initial data set simply as a
 %% \emph{spacetime development}.
 
+
 {\color{blue}
-\section{Twistor initial data}
+  %\section{Conformally-Einstein vacuum twistor initial data}
+  \section{Conformal twistor initial data}
 
 \subsection{Twistor zero-quantities}
 \label{Sec:TwistorZeroQuantities}
@@ -1185,7 +1295,7 @@ For the following discussion is convenient to make the following
 \begin{subequations}
   \begin{eqnarray}
    && H_{A'AB} \equiv 2
-    \nabla_{(A|A'|}\kappa_{B)},\label{Def_H_twistor}\\ && B_{ABC}
+    \nabla_{A'(A}\kappa_{B)},\label{Def_H_twistor}\\ && B_{ABC}
     \equiv \phi_{ABCD}\kappa^D.\label{Def_B_twistor}
     \end{eqnarray}
 \end{subequations}
@@ -1299,10 +1409,10 @@ $\nabla_D{}^{A'}H_{A'AB}$,
 \]
 and the definitions \eqref{def_Q_twistor} and equation
 \eqref{Curl_H_sym_toB_twistor} one has that
-\[
+\begin{align}\label{derH_twistor_toBandQ}
 \nabla_{D}{}^{A'}H_{A'AB} = 2 B_{ABD} \Xi + \tfrac{1}{3} Q_{B}
 \epsilon _{AD} + \tfrac{1}{3} Q_{A} \epsilon _{BD}
-\]
+\end{align}
 Applying $\nabla_{D}{}^{B'}$ to the last expression, and using the
 identity \eqref{DecomposeDoubleDerivativeContracted} along with the
 spinorial Ricci identities
@@ -1393,7 +1503,7 @@ exist a spinor field $\kappa_{A}$ for which
 are satisfied on $\mathcal{U}$. The latter is then used as initial
 data for the twistor candidate wave equation
 \begin{align} \label{Wave_eq_twistor_candidate_prop}
-\square \eta _{A} = -2 \Lambda \kappa _{A}
+\square \kappa _{A} = -2 \Lambda \kappa _{A}
 \end{align}
 As the zero-quantities $H_{A'AB},~B_{ABC}$ satisfy the homogeneous
 wave equations \eqref{Hom_wave_HandB1}-\eqref{Hom_wave_HandB2} then
@@ -1405,10 +1515,6 @@ in $\mathcal{D}^{+}(\mathcal{U})$. In other words,
 $\kappa_{A}$ solves the twistor equation on $\mathcal{D}^{+}(\mathcal{U})$.
 \end{proof}
 
-\medskip
-
-*****TOBEWRITTEN*****
-2.- Initial data conditions spelled out.
 
 \subsection{Comparisson between the Killing initial data conditions
   in the physical and unphysical pictures}
@@ -1533,13 +1639,144 @@ only the Buchdahl zero-quantity but also its derivative.
 
 
 
+\subsection{Intrinsic conformal twistor initial data conditions}
+
+In this section,  the conformal twistor initial data conditions
+of proposition \ref{Prop:Propagation_twistor} are written in terms
+of intrinsic quantities at $\mathcal{S}$.
+To understand the need of the calculation to be carried out in this section
+observe that although the conditions of proposition \ref{Prop:Propagation_twistor} are given
+on $\mathcal{S}$ it contains not only derivatives tangential to $\mathcal{S}$ but
+also normal to it. Hence, to obtain genuine intrinsic conditions on $\mathcal{S}$
+one needs to remove these normal derivatives.
+
+%\subsubsection{The $H|_{\mathcal{S}}=0$}
+
+Using the following definitions,
+\begin{align}
+  %H_{CAB} \eqref \tau _{C}{}^{A'} H_{A'AB}, \qquad
+  %\mathcal{H} _{ABC} \equiv H_{(ABC)},
+  %\qquad \mathcal{H} _{A} \equiv H^{D}{}_{AD}.
+  \mathcal{H} _{ABC}  \equiv \tau _{(A}{}^{A'}H_{|A'|BC)}, \qquad
+  \mathcal{H}_{A}  \equiv  \tau^{QA'} H_{A'AQ},
+\end{align}
+the space spinor split of $H_{A'AB}$ reads,
+\begin{align}
+  H_{A'AB} = - \tfrac{1}{2} \tau ^{C}{}_{A'} \mathcal{H} _{ABC}  -
+  \tfrac{1}{6} \tau ^{C}{}_{A'} \mathcal{H} _{B} \epsilon _{AC}  -
+  \tfrac{1}{6} \tau ^{C}{}_{A'} \mathcal{H} _{A} \epsilon _{BC}
+\end{align}
+Hence, the space spinors $\mathcal{H} _{ABC}$ and $\mathcal{H}_{A}$
+contain all the information of $H_{A'AB}$. In other words,
+\[
+H_{A'ABC}=0 \quad                   %|_{\mathcal{S}}=0
+\iff \quad \mathcal{H} _{A}=0      %|_{\mathcal{S}} =0
+\quad
+\& \quad \mathcal{H}_{ABC}=0  %|_{\mathcal{S}}=0
+\]
+Substituting the definition \eqref{Def_H_twistor} one obtains
+\begin{align}\label{spacespinordecompHtotwistorders}
+\mathcal{H} _{A} = \tfrac{3}{2} \nabla_\tau \kappa_{A} - \mathcal{D} _{AB}\kappa^{B}, \qquad \mathcal{H} _{ABC} = 2 \mathcal{D} _{(AB}\kappa _{C)},
+\end{align}
+Then $H_{A'AB}|_{\mathcal{S}}=0$  imposes then following conditions on the
+the initial data
+$(\kappa_A,\nabla_\tau\kappa_A)|_{\mathcal{S}}$
+for the twistor candidate wave equation
+\eqref{Wave_eq_twistor_candidate_prop}:
+\begin{align}\label{H_twistor_vanishes_ID}
+ \nabla_\tau \kappa _{A} = \tfrac{2}{3} \mathcal{D} _{AB}\kappa ^{B}, \qquad
+ \quad \mathcal{D} _{(AB}\kappa _{C)}=0 \qquad \text{on} \qquad \mathcal{S}.
+\end{align}
+Another set of constraints arise from the conditions
+$\nabla_\tau H_{A'BC}|_{\mathcal{S}}=0$ and $B_{ABC}|_{\mathcal{S}}=0$. These two
+conditions can be analysed in tandem since $\bmB$ is related to the derivative of
+$\bmH$. Using the space spinor split of $\nabla$ it follows from the
+identity \eqref{derH_twistor_toBandQ} that
+\begin{align}
+  \tau _{D}{}^{A'}\nabla_\tau H_{A'AB}   -2 \tau ^{CA'} \mathcal{D} _{DC}H_{A'AB}
+  = 4 B_{ABD} \Xi  + \tfrac{4}{3} Q_{(A}\epsilon _{B)D}\quad 
+\end{align}
+Hence, transvecting with $\tau^{D}{}_{B'}$ and rearranging gives
+\begin{align}
+\nabla_\tau H_{B'AB} = -4 B_{ABD} \Xi  \tau ^{D}{}_{B'}  -2 \tau ^{CA'} \tau ^{D}{}_{B'} \mathcal{D} _{DC}H_{A'AB}  - \tfrac{4}{3} \tau ^{D}{}_{B'}Q_{(A}\epsilon _{B)D}
+\end{align}
+Hence, if the  the twistor candidate wave equation is imposed, namely $Q_A=0$ then
+\begin{align}
+H_{A'AB}|_{\mathcal{S}}=0\quad \& \quad B_{ABC}|_{\mathcal{S}}=0 \implies \nabla_\tau H_{A'AB}|_{\mathcal{S}}=0.
+\end{align}
+In other words, imposing $\nabla_\tau H_{A'AB}|_{\mathcal{S}}=0$ is redundant if
+$H_{A'AB}|_{\mathcal{S}}=0$ and $ B_{ABC}|_{\mathcal{S}}=0$. Using the definition \eqref{Def_B_twistor},
+the condition $B_{ABC}|_{\mathcal{S}}=0$ simply reads,
+\begin{align}
+  \phi_{ABCD}\kappa^D=0 \qquad \text{on} \qquad \mathcal{S}.
+\end{align}
+Finally, for the condition $\nabla_{\tau}B_{ABC}|_{\mathcal{S}}=0$ one has, applying $\nabla_\tau$ to
+equation \eqref{Def_B_twistor}
+\begin{align}
+\nabla_\tau B_{ABC} = \phi _{ABCD}\nabla_\tau \kappa ^{D}  + \kappa ^{D} \nabla_\tau \phi _{ABCD} 
+\end{align}
+At this point one can exploit the evolution equation for the rescaled
+Weyl spinor \eqref{RescaledWeyl_evo_const} to subsitute for
+$\nabla_\tau \phi_{ABCD}$ and condition \eqref {H_twistor_vanishes_ID}
+to substitute $\nabla_\tau \kappa_A$ when evaluating at
+$\mathcal{S}$. Thus
+%the condition
+%$\nabla_{\tau}B_{ABC}|_{\mathcal{S}}=0$
+%reads
+\begin{align}\label{normalderB_twistor_exp}
+\nabla_{\tau}B_{ABC}|_{\mathcal{S}}= -2\kappa ^{D} \mathcal{D} _{DF}\phi _{ABC}{}^{F} + \tfrac{2}{3}  \phi
+_{ABCD} \mathcal{D} ^{D}{}_{F}\kappa ^{F} = 0 \qquad \text{on} \qquad \mathcal{S}.
+\end{align}
+In fact, the latter expression can be rewritten in terms of $\mathcal{H}_{ABC}|_{\mathcal{S}}$
+and $B_{ABC}|_{\mathcal{S}}$ as follows. Swapping indices $D$ and $A$ in equation
+\eqref{normalderB_twistor_exp}, and exploiting the constraint equation for the rescaled Weyl spinor in expression
+\eqref{RescaledWeyl_evo_const} renders
+\begin{align}\label{normalderB_twistor_exp2}
+\nabla_{\tau}B_{ABC}|_{\mathcal{S}}= -2 \kappa ^{D} \mathcal{D} _{AF}\phi _{DBC}{}^{F} + \tfrac{2}{3} \phi _{ABCD}
+\mathcal{D} ^{D}{}_{F}\kappa ^{F} = 0 \qquad \text{on} \qquad
+\mathcal{S}
+\end{align}
+Applying a $\mathcal{D}_{FQ}$ to the definition \eqref{Def_B_twistor}
+and using the Leibnitz rule, one can replace the first term in the
+last equation to obtain
+\begin{align}\label{normalderB_twistor_exp3}
+\nabla_{\tau}B_{ABC}|_{\mathcal{S}}= -2 \mathcal{D} _{AD}B_{BC}{}^{D} -2 \phi _{BCDF} \mathcal{D}
+_{A}{}^{F}\kappa ^{D} +\tfrac{2}{3} \phi _{ABCF} \mathcal{D} _{D}{}^{F}\kappa ^{D}
+= 0 \quad \text{on} \quad \mathcal{S}
+\end{align}
+From the irreducible decomposition of $\mathcal{D} _{AB}\kappa _{C}$
+and using the expression for $\mathcal{H}_{ABC}$ equation
+\eqref{spacespinordecompHtotwistorders} one has
+\begin{align}\label{decompSenKappa}
+\mathcal{D} _{AB}\kappa _{C} = \tfrac{1}{2} \mathcal{H} _{ABC} + \tfrac{1}{3} \epsilon _{BC} \mathcal{D} _{AD}\kappa ^{D} + \tfrac{1}{3} \epsilon _{AC} \mathcal{D} _{BD}\kappa ^{D}.
+\end{align}
+Substituting equation \eqref{decompSenKappa}
+into equation \eqref{normalderB_twistor_exp3} one concludes one gets
+\begin{align}
+\nabla_{\tau}B_{ABC}|_{\mathcal{S}}=- \phi _{BCDF} \mathcal{H} _{A}{}^{DF} -2 \mathcal{D} _{AD}B_{BC}{}^{D} = 0 \quad \text{on} \quad \mathcal{S}
+\end{align}
+
+\noindent Hence, overall, the only independent conditions to be imposed
+are $H_{A'AB}|_{\mathcal{S}}=0$ and $B_{ABC}|_{\mathcal{S}}=0$.
 
 
 
+
+
+
+
+%\subsubsection{The $(\nabla_\tau H)|_{\mathcal{S}}=0$ and
+% $B_{ABC}|_{\mathcal{S}}=0$ conditions}
+
+
+
+
+  
 }
 
+\medskip
 
-GOT HERE!!! 9.11.2021.
+GOT HERE!!! 10.11.2021.
 
   
 
@@ -2340,83 +2577,8 @@ curvature spinors. In the present analysis the curvature spinors are
 subject to the alternative conformal Einstein field equations as
 encoded in the zero-quantities
 \eqref{ZeroQuantitySecondDerivativeConformalFactor}-\eqref{ZeroQuantityWeyl}.
-\subsection{Space spinor formalism}\label{Subsec:DecomposedOperators}
-\label{SpaceSpinorFormalism}
-To have a self-contained discussion in this section the space spinor
-formalism, originally introduced in \cite{Som80}, is briefly recalled
----see also \cite{GarVal08c,BaeVal10b,CFEbook}.  Let $\tau^{AA'}$
-denote the spinorial counterpart of a timelike vector $\tau^{a}$,
-normal to a spacelike hypersurface $\mathcal{S}$ and normalised so
-that $\tau_{a}\tau^{a}=2$.  Then, it follows that
-$\tau_{AA'}\tau^{AA'}=2$ and, consequently,
-\[\tau_{AA'}\tau_B{}^{A'}=\epsilon_{AB}.\]  
-The covariant derivative $\nabla_{AA'}$ is then decomposed into the
-\emph{normal} and \emph{Sen} derivatives:
-\begin{align*}
-& \mathcal{P}\equiv \tau^{AA'}\nabla_{AA'},\\ & \mathcal{D}_{AB}\equiv
-  \tau_{(A}{}^{A'}\nabla_{B)A'}.
-\end{align*}
-The \emph{Weingarten} spinor and the \emph{acceleration} of the
-congruence are then defined by
-\begin{align*}
-& K_{ABCD} \equiv \tau_{D}{}^{C'} \mathcal{D}_{AB}\tau_{CC'},\\ &
-  K_{AB} \equiv \tau_{B}{}^{C'} \mathcal{P}\tau_{AC'}.
-\end{align*}
-The above can be inverted to obtain the following formulae which will
-prove useful in the sequel
-\begin{align*}
-& \mathcal{P} \tau_{CC'}=- K_{CD} \tau^{D}{}_{C'},\\ &
-  \mathcal{D}_{AB}\tau_{CA'} = - K_{ABCD} \tau^{D}{}_{A'}.
-\end{align*}
-The distribution induced by $\tau_{AA'}$ is integrable if and only
-$K^D{}_{(AB)D}=0$, in which case $K_{ABCD}$ describes the extrinsic
-curvature of the resulting foliation.
- Nevertheless, this is not required for our subsequent discussion.
-In other words, we will allow
- the possibility that the distribution is non-integrable
----i.e. the spinor $ K^D{}_{(AB)D}$ will not be assumed
-to vanish. 
 
-\medskip
 
-Defining the spinors $\chi_{AB}\equiv K^D{}_{(AB)D}$,
-$\chi_{ABCD}\equiv K_{(ABCD)}$ and $\chi\equiv K_{AB}{}^{AB}$, the
-Weingarten spinor decomposes as follows
-\begin{equation}
-\label{ExtrinsicCurvatureSplit}
-K_{ABCD} = \chi_{ABCD} - \tfrac{1}{2} \epsilon_{A(C}\chi_{D)B} -
-\tfrac{1}{2} \epsilon_{B(C}\chi_{D)A} - \tfrac{1}{3} \chi
-\epsilon_{A(C} \epsilon_{D)B}.
-\end{equation}
-For the following discussion we will also need the commutators form
-with $\mathcal{P},~\mathcal{D}_{AB}$. To write these commutators in a
-succinct way, first define
-\[\widehat{\square}_{AB}\equiv \tau_A{}^{A'}\tau_B{}^{B'}\square_{A'B'}\]
-from which, proceeding analogously as in \cite{BaeVal10b}, one obtains
-\begin{align}
- \left[\mathcal{P},\mathcal{D}_{AB}
-   \right]&=-\tfrac{1}{2}\chi_{AB}-\square_{AB}+\widehat{\square}_{AB}
-+K_{(A}{}^D\mathcal{D}_{B)D}-K_{AB}{}^{FG}\mathcal{D}_{FG}, \label{CommutatorNormalSenDeriv}
-\\ \left[\mathcal{D}_{AB},\mathcal{D}_{CD}\right]&=
-\tfrac{1}{2}\left(\epsilon_{A(C}\square_{D)B}+\epsilon_{B(C}\square_{D)A}\right)
-+\tfrac{1}{2}\left(\epsilon_{A(C}\widehat{\square}_{D)B}+\epsilon_{B(C}\widehat{\square}_{D)A}\right)
- \nonumber \\ &
- +\tfrac{1}{2}\left(K_{CDAB}\mathcal{P}-K_{ABCD}\mathcal{P}\right)
-+K_{CDF(A}\mathcal{D}_{B)}{}^F-K_{ABF(C}\mathcal{D}_{D)}{}^F \label{CommutatorSenSenDeriv}
-\end{align}
-It will also prove convenient to decompose the tracefree Ricci spinor,
-$\Phi_{AA'BB'}$ in space spinor form. To do so, introduce its space
-spinor counterpart $\Phi_{ABCD}\equiv\tau_{B}{}^{B'} \tau_{D}{}^{D'}
-\Phi_{ACB'D'}$.  The latter can be decomposed as
-\begin{align}
-\label{RicciSpaceSpinorSplit}
-\Phi_{ABCD}& = \Theta_{ABCD} + \tfrac{1}{2}
-\left(\epsilon_{C(B}\Phi_{D)A} + \epsilon_{A(B}\Phi_{D)C}\right) -
-\tfrac{1}{3} \Phi \epsilon_{A(B}\epsilon_{D)C}
-\end{align}
-where
-\[ \Phi \equiv \Phi_{A}{}^{A}{}_{B}{}^{B},\qquad \Phi_{AB} \equiv \Phi_{(AB)C}{}^{C},\qquad
- \Theta_{ABCD} \equiv \Phi_{(ABCD)}\]
 
 \subsection{Space spinor decompositions and ancillary identities}
 To obtain intrinsic conditions on $\mathcal{S}$ from equations
