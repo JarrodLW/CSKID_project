@@ -5,7 +5,7 @@
 %%%%%%%
 %%%%%%%
 %%%%%%% Started on: 11.9.2016
-%%%%%%% Current version: 09.11.2021
+%%%%%%% Current version: 18.Nov.2021
 %%%%%%%
 
 \documentclass[10pt,a4paper]{article}
@@ -1802,23 +1802,26 @@ has, applying $\nabla_\tau$ to equation \eqref{Def_B_twistor} that
 \end{align}
 At this point one can exploit the evolution equation for the rescaled
 Weyl spinor \eqref{RescaledWeyl_evo_const} to subsitute for
-$\nabla_\tau \phi_{ABCD}$ and using condition \eqref {H_twistor_vanishes_ID}
+$\nabla_\tau \phi_{ABCD}$ and using equation
+\eqref {spacespinordecompHtotwistorders}
 to substitute $\nabla_\tau \kappa_A$ when evaluating at
-$\mathcal{S}$. Namely,
+$\mathcal{S}$. This substitution renders,
 %the condition
 %$\nabla_{\tau}B_{ABC}|_{\mathcal{S}}=0$
 %reads
 \begin{align}\label{normalderB_twistor_exp}
-\nabla_{\tau}B_{ABC}|_{\mathcal{S}}= -2\kappa ^{D} \mathcal{D} _{DF}\phi _{ABC}{}^{F} + \tfrac{2}{3}  \phi
-_{ABCD} \mathcal{D} ^{D}{}_{F}\kappa ^{F} = 0 \qquad \text{on} \qquad \mathcal{S}.
+\nabla_{\tau}B_{ABC}|_{\mathcal{S}}= -2\kappa ^{D} \mathcal{D}
+_{DF}\phi _{ABC}{}^{F} + \tfrac{2}{3} \phi _{ABCD} \mathcal{D}
+^{D}{}_{F}\kappa ^{F} + \tfrac{2}{3}\phi_{ABCD}\mathcal{H}^D = 0 \qquad \text{on} \qquad \mathcal{S}.
 \end{align}
-In fact, the latter expression can be rewritten in terms of $\mathcal{H}_{ABC}|_{\mathcal{S}}$
+In fact, the latter expression can be completly rewritten in terms of
+$\mathcal{H}_A|_{\mathcal{S}}$, $\mathcal{H}_{ABC}|_{\mathcal{S}}$
 and $B_{ABC}|_{\mathcal{S}}$. This can be done as follows: swapping indices $D$ and $A$ in equation
 \eqref{normalderB_twistor_exp}, and exploiting the constraint equation for the rescaled Weyl spinor in expression
-\eqref{RescaledWeyl_evo_const} renders
+\eqref{RescaledWeyl_evo_const} gives
 \begin{align}\label{normalderB_twistor_exp2}
 \nabla_{\tau}B_{ABC}|_{\mathcal{S}}= -2 \kappa ^{D} \mathcal{D} _{AF}\phi _{DBC}{}^{F} + \tfrac{2}{3} \phi _{ABCD}
-\mathcal{D} ^{D}{}_{F}\kappa ^{F} = 0 \qquad \text{on} \qquad
+\mathcal{D} ^{D}{}_{F}\kappa ^{F} + \tfrac{2}{3}\phi_{ABCD}\mathcal{H}^D = 0 \qquad \text{on} \qquad
 \mathcal{S}.
 \end{align}
 Applying a $\mathcal{D}_{FQ}$ to the definition \eqref{Def_B_twistor}
@@ -1827,7 +1830,7 @@ last equation to obtain
 \begin{align}\label{normalderB_twistor_exp3}
 \nabla_{\tau}B_{ABC}|_{\mathcal{S}}= -2 \mathcal{D} _{AD}B_{BC}{}^{D}
 -2 \phi _{BCDF} \mathcal{D} _{A}{}^{F}\kappa ^{D} +\tfrac{2}{3} \phi
-_{ABCF} \mathcal{D} _{D}{}^{F}\kappa ^{D} = 0 \quad \text{on} \quad
+_{ABCF} \mathcal{D} _{D}{}^{F}\kappa ^{D} + \tfrac{2}{3}\phi_{ABCD}\mathcal{H}^D = 0 \quad \text{on} \quad
 \mathcal{S}.
 \end{align}
 From the irreducible decomposition of $\mathcal{D} _{AB}\kappa _{C}$
@@ -1838,11 +1841,11 @@ and using the expression for $\mathcal{H}_{ABC}$ equation
 \tfrac{1}{3} \epsilon _{BC} \mathcal{D} _{AD}\kappa ^{D} +
 \tfrac{1}{3} \epsilon _{AC} \mathcal{D} _{BD}\kappa ^{D}.
 \end{align}
-Substituting equation \eqref{decompSenKappa} into equation
+Substituting decomposition \eqref{decompSenKappa} into equation
 \eqref{normalderB_twistor_exp3} renders
 \begin{align}
 \nabla_{\tau}B_{ABC}|_{\mathcal{S}}=- \phi _{BCDF} \mathcal{H}
-_{A}{}^{DF} -2 \mathcal{D} _{AD}B_{BC}{}^{D} = 0 \quad \text{on} \quad
+_{A}{}^{DF} -2 \mathcal{D} _{AD}B_{BC}{}^{D} + \tfrac{2}{3}\phi_{ABCD}\mathcal{H}^D = 0 \quad \text{on} \quad
 \mathcal{S}
 \end{align}
 
@@ -1876,7 +1879,7 @@ evolving according to the wave equation:
 with initial data satisfying conditions in equation
 \eqref{CS-KID_twistor} and
 \begin{equation}
-  \nabla_\tau \kappa _{A} = \tfrac{2}{3} \mathcal{D} _{AB}.
+  \nabla_\tau \kappa _{A} = \tfrac{2}{3} \mathcal{D} _{AB} \kappa^B.
 \end{equation}
 \end{theorem}
 
@@ -1896,7 +1899,7 @@ hold on $\mathcal{U}$, then the domain of dependence of $\mathcal{U}$ is endowed
 
 \medskip
 
-GOT HERE!!! 11.11.2021.
+GOT HERE!!! 18.11.2021.
 
   
 \section{Conformal Killing spinor initial data}
@@ -1948,7 +1951,7 @@ Nonetheless, future applications are not
 restricted to the analysis of de-Sitter like spacetimes. To see this,
 notice that, the most delicate part of the analysis consisted on
 finding a system of homogeneous wave equations for $H_{A'ABC}$ and
-$B_{ABCD}$ and $F_{ABCD}$. This system of wave equations in turn, leads to
+$B_{ABCD}$ and $F_{A'ABC}$. This system of wave equations in turn, leads to
 conditions \eqref{}-\eqref{}
 which are irrespective of the causal nature of
 $\mathcal{S}$. Consequently, one could investigate the analogous
