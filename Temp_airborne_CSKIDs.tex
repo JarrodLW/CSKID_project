@@ -1,0 +1,452 @@
+%%%%%%%
+%%%%%%% Conformal twistor KIDs
+%%%%%%% 
+%%%%%%%
+%%%%%%% 
+%%%%%%%
+%%%%%%% Started on: 26.05.2019
+%%%%%%% 
+%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{latexsym}
+\usepackage{mathrsfs}
+\usepackage{stmaryrd}
+\usepackage[dvips]{epsfig}
+\usepackage{setspace}
+\usepackage{float}
+\usepackage{bm}
+%\usepackage{showkeys}
+%\usepackage[pdftex]{graphicx}
+\usepackage{tikz}
+\usepackage{enumerate}
+\usepackage{subfigure}
+\usepackage{nomencl}
+%\usepackage{makeidx} 
+%\makeindex
+\usepackage{authblk}
+\renewcommand\Affilfont{\itshape\small}
+\usepackage{textcomp}
+\usepackage{scrextend}% add KOMA-Script features to other classes
+\usepackage[toc,page]{appendix}
+
+%\usepackage[utf8]{inputenc}
+%\usepackage[LGR,T1]{fontenc}
+%\newcommand\Koppa{\begingroup\fontencoding{LGR}\selectfont\char21\endgroup}
+
+\theoremstyle{plain}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{theorem}{Theorem}
+\newtheorem{assumption}{Assumption}
+\newtheorem*{conjecture}{Conjecture}
+\newtheorem*{subconjecture}{Subconjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem*{main}{Theorem}
+\newtheorem{definition}{Definition}
+\newtheorem{remark}{Remark}
+
+\setlength{\textwidth}{148mm}           % Width of text on page- max 148
+\setlength{\textheight}{235mm}          % height of text on page-max 235
+\setlength{\topmargin}{-10mm}            % Margin at top ofpage- max -5
+\setlength{\oddsidemargin}{0mm}         % Odd page sidemargin max 15
+\setlength{\evensidemargin}{0mm}
+
+% Underlined lowcase latin letters
+\def\es{{\bar{s}}}
+\def\er{{\bar{r}}}
+
+% Boldface mathmode lowcase latin letters
+\def\bma{{\bm a}}
+\def\bmb{{\bm b}}
+\def\bmc{{\bm c}}
+\def\bmd{{\bm d}}
+\def\bme{{\bm e}}
+\def\bmf{{\bm f}}
+\def\bmg{{\bm g}}
+\def\bmh{{\bm h}}
+\def\bmi{{\bm i}}
+\def\bmj{{\bm j}}
+\def\bmk{{\bm k}}
+\def\bml{{\bm l}}
+\def\bmn{{\bm n}}
+\def\bmm{{\bm m}}
+\def\bmo{{\bm o}}
+\def\bmq{{\bm q}}
+\def\bms{{\bm s}}
+\def\bmt{{\bm t}}
+\def\bmu{{\bm u}}
+\def\bmv{{\bm v}}
+\def\bmw{{\bm w}}
+\def\bmx{{\bm x}}
+\def\bmy{{\bm y}}
+\def\bmz{{\bm z}}
+
+% Boldface mathmode numbers
+\def\bmzero{{\bm 0}}
+\def\bmone{{\bm 1}}
+\def\bmtwo{{\bm 2}}
+\def\bmthree{{\bm 3}}
+
+% Boldface mathmode uppercase latin letters
+\def\bmA{{\bm A}}
+\def\bmB{{\bm B}}
+\def\bmC{{\bm C}}
+\def\bmD{{\bm D}}
+\def\bmE{{\bm E}}
+\def\bmF{{\bm F}}
+\def\bmG{{\bm G}}
+\def\bmH{{\bm H}}
+\def\bmK{{\bm K}}
+\def\bmL{{\bm L}}
+\def\bmM{{\bm M}}
+\def\bmN{{\bm N}}
+\def\bmP{{\bm P}}
+\def\bmQ{{\bm Q}}
+\def\bmR{{\bm R}}
+\def\bmS{{\bm S}}
+\def\bmT{{\bm T}}
+\def\bmX{{\bm X}}
+\def\bmZ{{\bm Z}}
+
+
+\def\Riem{{\bm R}{\bm i}{\bm e}{\bm m}}
+\def\Ric{{\bm R}{\bm i}{\bm c}}
+\def\Weyl{{\bm W}{\bm e}{\bm y}{\bm l}}
+\def\RWeyl{{\bm R}{\bm W}{\bm e}{\bm y}{\bm l}}
+\def\Sch{{\bm S}{\bmc}{\bm h}}
+\def\Schouten{{\bm S}{\bmc}{\bm h}{\bm o}{\bm u}{\bm t}{\bm e}{\bm n}}
+\def\Hessian{{\bm H}{\bm e}{\bm s}{\bm s}}
+
+% Fracture letters
+\def\fraka{{\frak a}}
+\def\frakb{{\frak b}}
+\def\frakc{{\frak c}}
+\def\frakd{{\frak d}}
+\def\frakf{{\frak f}}
+\def\frakg{{\frak g}}
+\def\fraki{{\frak i}}
+\def\frakj{{\frak j}}
+\def\frakk{{\frak k}}
+
+% Mathbf letters
+\def\mbfu{\mathbf{u}}
+
+% Boldface mathmode lowcase latin letters
+\def\bma{{\bm a}}
+\def\bmb{{\bm b}}
+\def\bmc{{\bm c}}
+\def\bmd{{\bm d}}
+\def\bme{{\bm e}}
+\def\bmf{{\bm f}}
+\def\bmg{{\bm g}}
+\def\bmh{{\bm h}}
+\def\bmi{{\bm i}}
+\def\bmj{{\bm j}}
+\def\bmk{{\bm k}}
+\def\bml{{\bm l}}
+\def\bmn{{\bm n}}
+\def\bmm{{\bm m}}
+\def\bmo{{\bm o}}
+\def\bmq{{\bm q}}
+\def\bmr{{\bm r}}
+\def\bms{{\bm s}}
+\def\bmt{{\bm t}}
+\def\bmu{{\bm u}}
+\def\bmv{{\bm v}}
+\def\bmw{{\bm w}}
+\def\bmx{{\bm x}}
+\def\bmy{{\bm y}}
+\def\bmz{{\bm z}}
+\def\bmJ{{\bm J}}
+
+% Boldface mathmode numbers
+\def\bmzero{{\bm 0}}
+\def\bmone{{\bm 1}}
+\def\bmtwo{{\bm 2}}
+\def\bmthree{{\bm 3}}
+
+% Boldface mathmode uppercase latin letters
+\def\bmA{{\bm A}}
+\def\bmB{{\bm B}}
+\def\bmC{{\bm C}}
+\def\bmD{{\bm D}}
+\def\bmE{{\bm E}}
+\def\bmF{{\bm F}}
+\def\bmG{{\bm G}}
+\def\bmH{{\bm H}}
+\def\bmK{{\bm K}}
+\def\bmL{{\bm L}}
+\def\bmM{{\bm M}}
+\def\bmN{{\bm N}}
+\def\bmP{{\bm P}}
+\def\bmQ{{\bm Q}}
+\def\bmR{{\bm R}}
+\def\bmS{{\bm S}}
+\def\bmT{{\bm T}}
+\def\bmU{{\bm U}}
+\def\bmV{{\bm V}}
+\def\bmW{{\bm W}}
+\def\bmX{{\bm X}}
+\def\bmY{{\bm Y}}
+\def\bmZ{{\bm Z}}
+
+
+% Boldface mathmode lowcase greek letters
+\def\bmalpha{{\bm \alpha}}
+\def\bmbeta{{\bm \beta}}
+\def\bmgamma{{\bm \gamma}}
+\def\bmdelta{{\bm \delta}}
+\def\bmepsilon{{\bm \epsilon}}
+\def\bmeta{{\bm \eta}}
+\def\bmzeta{{\bm\zeta}}
+\def\bmxi{{\bm \xi}}
+\def\bmchi{{\bm \chi}}
+\def\bmiota{{\bm \iota}}
+\def\bmomega{{\bm \omega}}
+\def\bmlambda{{\bm \lambda}}
+\def\bmmu{{\bm \mu}}
+\def\bmnu{{\bm \nu}}
+\def\bmphi{{\bm \phi}}
+\def\bmvarphi{{\bm \varphi}}
+\def\bmsigma{{\bm \sigma}}
+\def\bmvarsigma{{\bm \varsigma}}
+\def\bmtau{{\bm \tau}}
+\def\bmupsilon{{\bm \upsilon}}
+
+% Boldface mathmode uppercase greek letters
+\def\bmGamma{{\bm \Gamma}}
+\def\bmPhi{{\bm \Phi}}
+\def\bmUpsilon{{\bm \Upsilon}}
+\def\bmSigma{{\bm \Sigma}}
+
+% Boldface operators
+\def\bmpartial{{\bm \partial}}
+\def\bmnabla{{\bm \nabla}}
+\def\bmhbar{{\bm \hbar}}
+\def\bmperp{{\bm \perp}}
+\def\bmell{{\bm \ell}}
+
+% Complex and real numbers
+\font\SYM=msbm10
+\newcommand{\Real}{\mbox{\SYM R}}
+\newcommand{\Complex}{\mbox{\SYM C}}
+\newcommand{\Natural}{\mbox{\SYM N}}
+\newcommand{\Integer}{\mbox{\SYM Z}}
+\newcommand{\Sphere}{\mbox{\SYM S}}
+
+
+% ParallelPerp symbol
+\newcommand{\parperp}{\mathbin{\text{\rotatebox[origin=c]{90}{$\models$}}}}
+\newcommand{\perppar}{\mathbin{\text{\rotatebox[origin=c]{-90}{$\models$}}}}
+
+% Projector symbols
+%\newcommand{\proj2perp}{\pi^{\small{\perp}}}
+%\newcommand{\proj2par}{\pi^{\small{\parallel}}}
+%\newcommand{\proj4par}{\pi^{\small{\parallel}}}
+%\newcommand{\proj4parperp}{\pi^{\small{\parperp}}}
+%\newcommand{\proj4perppar}{\pi^{\small{\perppar}}}
+%\newcommand{\proj4perp}{\pi^{\small{\perp}}}
+
+%Counter variable for the margin notes
+\newcounter{mnotecount}%[section]
+
+\usepackage{cancel}
+
+% This code generates the margin notes
+\newcommand{\mnotex}[1]%{}
+{\protect{\stepcounter{mnotecount}}$^{\mbox{\footnotesize $\bullet$\themnotecount}}$ 
+\marginpar{%\color{red}%
+\raggedright\tiny\em
+$\!\!\!\!\!\!\,\bullet$\themnotecount: #1} }
+
+\renewcommand\labelitemi{\tiny$\bullet$}
+
+\begin{document}
+
+\title{\textbf{Conformal twistor KIDs}}
+
+\author[,1]{E. Gasper\'{i}n \footnote{E-mail address:{\tt
+      edgar.gasperin@tecnico.ulisboa.pt}}}
+\author[,2]{J.L. Williams \footnote{E-mail address:{\tt jlw31@bath.ac.uk}}}
+%\author[1]{Con T. Ributor}
+%\affil[1]{Autodesk Research?}
+\affil[1]{Instituto Superior T\'{e}cnico }
+\affil[2]{Department of Mathematical Sciences, University of Bath, Claverton Down, Bath BA2 7AY, United Kingdom.}
+
+\maketitle
+\begin{abstract}
+    Write-up of Edgar's twistor KID calculations from the new notebook. 
+\end{abstract}
+
+\section{Definitions}
+
+We are interested here in the twistor equation:
+\[\nabla_{A'(A}\kappa_{B)}=0, \]
+encoded in the vanishing of the \textit{zero quantity} $H_{A'AB}:=2\nabla_{A'(A}\kappa_{B)}$. It will prove useful to define the auxiliary quantity
+\[\xi_{A'}:= \nabla^A{}_{A'}\kappa_A. \]
+We also define the zero quantity $S_{A'B'A}:=\nabla_{QA'}H_{B'A}{}^Q.$ This may be expressed alternatively in terms of the auxiliary field\mnotex{I think we should change the sign in either the definition of $S$ or $\xi$, to be more consistent. } $\xi_{A'}$, by an easy computation, as follows:
+\begin{equation}
+S_{A'B'A} = -\nabla_{AB'}\xi_{A'} + 2\Lambda \epsilon_{A'B'}\kappa_A - 2\Phi_{AQA'B'}\kappa^Q. \label{Eq:SZeroQuantityInTermsOfXi}
+\end{equation}
+The other (symmetrised) contraction yields the \textit{Buchdahl constraint}:
+\[0 = \nabla_{(A}{}^{A'}H_{\vert A'\vert BC)} = \Psi_{ABCD}\kappa^D, \]
+though this won't feature in the calculations here. 
+
+\section{Wave equations}
+
+\subsection{For the twistor fields}
+
+A short computation shows that 
+\[\square \kappa_B = -2\Lambda \kappa_B + \tfrac{2}{3}\nabla^{AA'}H_{A'AB}. \]
+Hence, if $\kappa_B$ solves the twistor equation, then it necessarily satisfies the wave equation 
+\begin{equation}
+    \square \kappa_B + 2\Lambda \kappa_B = 0. \label{Eq:WaveEqForKappa}
+\end{equation}
+We will choose to propagate a twistor candidate according to this equation. It is maybe worth noticing that $S_{A'}{}^{A'}{}_B=\nabla^{AA'}H_{A'AB}$. Hence, if $\kappa_A$ satisfies \eqref{Eq:WaveEqForKappa}, then necessarily $S_{A'B'A} = S_{(A'B')A}$, since it is assured that $\nabla^{AA'}H_{A'AB}=0$. 
+\\
+
+We will also need a wave equation for the auxiliary field $\xi_{A'}$. To get this, take the contracted derivative of \eqref{Eq:WaveEqForKappa} and commute derivatives, finally resulting in 
+\begin{equation}
+    \square \xi_{A'} + 2\Lambda \xi_{A'} - 8(\nabla_{AA'}\Lambda)\kappa^A = 0. \label{Eq:WaveEqForXi}
+\end{equation}
+Again, if $\kappa_A$ is a twistor, then the resulting $\xi_{A'}$ solves \eqref{Eq:WaveEqForXi}. Given a twistor candidate and its corresponding $\xi_{A'}$, we choose to propagate the latter according to this wave equation. 
+
+\subsection{For the zero quantities}
+
+In order to derive wave equations for the zero quantities, we assume that twistor candidate, $\kappa_A$ and its auxiliary spinor $\xi_{A'}$ satisfy the wave equations \eqref{Eq:WaveEqForKappa}--\eqref{Eq:WaveEqForXi}; at the end of the day, these will be satisfied by construction, since the candidate quantities will be propagated off the initial hypersurface using these wave equations.  
+\\
+
+To get a wave equation for $H_{A'AB}$, simply take the definition of $\bmS$ in terms of $\bmH$ and take a contracted derivative ---i.e. consider $\nabla_{A}{}^{D'}S_{D'A'B}$. Ultimately, we get
+\[\square H_{A'AB} = 8\Lambda H_{A'AB} - 2\Psi_{ABCD}H_{A'}{}^{CD} - 2\Phi_{ADA'D'}H^{D'D}{}_B - 2\nabla_{AD'}S^{D'}{}_{A'B}.\]
+It is important to note that this is expressible (in a regular way) in terms of the rescaled Weyl spinor $\phi_{ABCD} = \Theta^{-1}\Psi_{ABCD}$:
+\[\square H_{A'AB} = 8\Lambda H_{A'AB} - 2\Theta\phi_{ABCD}H_{A'}{}^{CD} - 2\Phi_{ADA'D'}H^{D'D}{}_B - 2\nabla_{AD'}S^{D'}{}_{A'B}.\]
+To close the system, we need a wave equation for $S_{A'B'A}$. To get this, we will apply the D'Alembertian to \eqref{Eq:SZeroQuantityInTermsOfXi}, commute derivatives, and substitute the wave equation for $\xi_{A'}$, equation \eqref{Eq:WaveEqForXi}. Finally, we arrive at\mnotex{Is it possible to simplify this a bit more?}
+\begin{multline}\square S_{A'B'A} = 6\Lambda S_{A'B'A} - 4\Phi_{ABC'(A'}S_{B')}{}^{C'B} - 2\Theta \bar{\phi}_{A'B'C'D'}S^{C'D'}{}_A \\- \tfrac{2}{3}\Phi_{BCA'B'}(\nabla_{AC'}H^{C'BC}+2\nabla^C{}_{C'}H^{C'}{}_A{}^B) \\+ 4H_{(A'\vert AB\vert}\nabla^B{}_{B')}\Lambda - 2(\nabla_{CC'}\Phi_{ABA'B'})H^{C'BC}.
+\end{multline}
+Note that the terms on the right-hand-side are homogeneous in $\bmS,~\bmH$ and $\nabla\bmH$.
+
+\section{What goes wrong in the higher-valence case?}
+
+Define also the ``Buchdahl zero quantity":
+\[ B_{ABCD} = \phi_{F(ABC}\kappa_{D)}{}^F.\]
+Note that 
+\[\nabla_{(A}{}^{A'}H_{\vert A'\vert BCD)} = 6\Theta B_{ABCD} \]
+Can derive equations of the form
+\begin{eqnarray}
+    && \square H_{A'ABC} = (\bmH, \nabla\bmS),\\
+    && \square H_{A'ABC} = (\bmH, \bmB, \nabla\bmB),\\
+    && \square S_{AA'BB'} = (\bmH, \bmS, \Theta\bmB, \nabla\Theta\cdot\nabla\bmB) = (\bmH, \bmS, \nabla\bmH, \nabla\Theta\cdot\nabla\bmB),\\
+    && \square B_{ABCD} = (\bmH, \bmB) + \tfrac{2}{3}\nabla_{\bm\xi}\phi_{ABCD} = (\bmH, \bmB) + \tfrac{2}{3}\mathcal{L}_{\bm\xi}\phi_{ABCD}.\label{Eq:TempEqForBuchdahl}
+\end{eqnarray}
+The final equality follows from the fact that $\nabla_{(A}{}^{A'}\xi_{B)A'}=0$, as a consequence of the assumed wave equation for $\kappa_{AB}$.\mnotex{Generally speaking, do we need to worry about the fact that $\kappa_{AB},\xi_{AA'}$ are being propagated independently (though consistently)?}
+\\
+
+\textbf{Note}: In the equation for $\bmS$, we couldn't replace the $\nabla \bmB$ with $\nabla\nabla\bmH$ terms even if we wanted to, because then we would have $\Theta^{-1}$ factors appearing. 
+\\
+
+\textbf{Proposal:} Define $F_{A'BCD}:=\nabla^A{}_{A'}B_{ABCD}$. Then we get a wave equation for $B$ trivially:
+\[\square B_{ABCD} \propto \nabla_{(A}{}^{A'}F_{\vert A'\vert BCD)} + \text{curv.}\times \bmB. \]
+To get the remaining equation for $F_{A'BCD}$ take a contracted derivative of \eqref{Eq:TempEqForBuchdahl}, commute derivatives on the $\nabla_{\bm\xi}\bm\phi$ term and use the fact that $\nabla^A{}_{A'}\phi_{ABCD}=0.$
+
+\section{A closed system for the Killing spinor case}
+
+Zero quantities:
+\[H_{A'ABC}, \qquad B_{ABCD}, \qquad F_{A'BCD}:=\nabla^A{}_{A'}B_{ABCD} \]
+From the previous section, $\nabla_{(A}{}^{A'}H_{\vert A'\vert BCD)} = 6\Theta B_{ABCD}$. Additionally, the wave equation for $\kappa_{AB}$ is equivalent to $\nabla^{AA'}H_{A'ABC}=0$, 
+\[ Q_{BC} = \nabla^{AA'}H_{A'ABC}\]
+\[ \square \kappa_{BC} = -4 \Lambda\kappa_{BC}  + \Theta \kappa^{AD} \phi_{BCAD} + \tfrac{1}{2} Q_{BC}\]
+We have the irreducible decomposition
+\begin{equation}
+     \nabla_{D}{}^{A'}H_{A'ABC} = 6 \Theta B_{ABCD} + \tfrac{3}{4} \
+Q_{(AB}\epsilon_{C)D}\label{IrrDecompCurlOfH}
+\end{equation}
+. Contracting with $\nabla^A{}_{B'}$ we then derive the following wave equation:
+\begin{multline}
+    \square H_{B'ABC} = 6 \Lambda H_{B'ABC} + 12 \Theta \nabla_{DB'}B_{ABC}{}^{D} - 12 B_{ABCD} \nabla^{D}{}_{B'}\Theta \\+ \tfrac{3}{2} \nabla_{(A|B'|}Q_{BC)} - 6 \Phi_{(A}{}^{D}{}_{|B'}{}^{A'}H_{A'|BC)D}
+\end{multline}
+Similarly, substituting the definition of $F_{A'ABC}$ in terms of $B_{ABCD}$, it is straightforward to verify the following wave equation for $B_{ABCD}$: 
+\begin{equation}
+     \square B_{ABCD} = 12\Lambda B_{ABCD} - 6\Theta \phi_{(AB}{}^{FG}B_{CD)FG} + 2\nabla_{AA'}F^{A'}{}_{BCD}. \label{Eq:FirstWaveEqForB}
+\end{equation}
+The task remaining is to derive a wave equation for $F_{A'ABC}$. Let us first consider some useful identities:
+\begin{align}
+     \kappa^{DG}\phi_{(ABC}{}^H\phi_{F)HDG}&=\kappa_A{}^D\phi_{(BC}{}^{GH}\phi_{FD)GH}+\kappa_B{}^D\phi_{(AC}{}^{GH}\phi_{FD)GH}\nonumber\\
+    &+\kappa_C{}^D\phi_{(AB}{}^{GH}\phi_{FD)GH}+\kappa_F{}^D\phi_{(BC}{}^{GH}\phi_{AD)GH} \nonumber\\
+    & =2\phi_{(AB}{}^{GH}B_{CF)GH}
+\end{align}
+Using this identity, we can derive the following alternative (non-homogeneous) wave equation for $B_{ABCD}$:
+\begin{equation}
+    \square B_{ABCD} = \tfrac{2}{3}\nabla_{\bm\xi}\phi_{ABCD} + 8\Lambda B_{ABCD} - 14\Theta \phi_{(AB}{}^{FG}B_{CD)FG} + \tfrac{2}{3}(\nabla_{FA'}\phi_{G(ABC})H^{A'}{}_{D)}{}^{FG}\label{Eq:SecondWaveEqForB}
+\end{equation}
+where, for convenience, we have defined $\xi_{AA'}:=\nabla^B{}_{A'}\kappa_{AB}$, as usual. Contrary to previous approaches, however, we won't propagate $\xi_{AA'}$ independently of $\kappa_{AB}$; it is simply a convenient shorthand. 
+\begin{remark}{\em}
+As an aside, note that \eqref{Eq:SecondWaveEqForB} expresses the fact that, \textbf{given a Killing spinor} $\kappa_{AB}$, the quantity 
+\[\mathcal{L}_{\bm\xi}\phi_{ABCD}\equiv \nabla_{\bm\xi}\phi_{ABCD} + \phi_{F(ABC}\nabla_{D)A'}\xi^{FA'} = \nabla_{\bm\xi}\phi_{ABCD} \]
+---the equality being by virtue of the wave equation for $\kappa_{AB}$--- vanishes, and in particular that in the physical spacetime the Lie derivative of the Weyl curvature along the Killing vector $\tilde{\bm\xi}$ vanishes, as we know should be the case.
+\end{remark}
+
+At this point we note that there are no derivatives of zero quantities appearing on the right-hand-side of \eqref{Eq:SecondWaveEqForB}. This, combined with the fact that $\nabla^A{}_{A'}\phi_{ABCD}=0$, makes it seems plausible that by applying $\nabla^A{}_{A'}$ to \eqref{Eq:SecondWaveEqForB} we will be able to derive a wave equation for $F_{A'BCD}$. We will see that this does indeed work; the only essential difficulty is in showing that $\nabla^A{}_{A'}\nabla_{\bm\xi}\phi_{ABCD}$ is expressible in terms of the zero quantities $\bmH, \bmB, \bmF$ and their first derivatives only. First, we note the following identities:
+\[ \kappa^{CD} \nabla_{DG'}\phi_{ABFC} = 2 \xi^{C}{}_{G'} \phi_{ABFC} +  \phi_{CD(AB} H_{\vert G'\vert F)}{}^{CD} - 4 F_{G'ABF}\]
+which can be used to derive the more general identity
+\begin{multline}
+    \kappa_{A}{}^{F} \nabla_{DF'}\phi_{BCGF} = \tfrac{1}{3} \xi_{AF'} \phi_{BCDG} -  \tfrac{1}{3} \xi^{F}{}_{F'} \phi_{BCGF} \epsilon_{AD} +  \epsilon_{AD} F_{F'BCG} + \nabla_{(B|F'}B_{A|CG)D} \\ + \tfrac{1}{3} \phi_{(BC|D}{}^{F}H_{F'A|G)F} + 2 \epsilon_{A(B}\nabla^{F}{}_{|F'|}B_{C|D|G)F} -  \tfrac{1}{3} \xi^{F}{}_{F'}\phi_{(BC|DF}\epsilon_{A|G)} \\
+    -  \tfrac{2}{3} \xi^{F}{}_{F'}\phi_{(B|D|C|F}\epsilon_{A|G)} -  \tfrac{1}{3} \phi_{(BC}{}^{FH}H_{|F'|G)FH}\epsilon_{AD} -  \tfrac{1}{6} \phi_{(BC}{}^{FH}H_{|F'DFH}\epsilon_{A|G)} \\
+    -  \tfrac{1}{3} \phi_{(B|D}{}^{FH}H_{F'|C|FH}\epsilon_{A|G)} -  \tfrac{1}{6} \phi_{D(B}{}^{FH}H_{|F'|C|FH}\epsilon_{A|G)}
+\end{multline}
+\begin{multline}
+    \kappa^{AD} \phi_{AD}{}^{GH} \nabla_{HA'}\phi_{BCFG} =  4 \xi^{A}{}_{A'}\phi_{(BC}{}^{DG}\phi_{F)ADG} + \tfrac{1}{2} \phi_{ADGH} \phi^{ADGH} H_{A'BCF} \\ + 4 B_{(BC}{}^{AD}\nabla^{G}{}_{|A'|}\phi_{F)ADG} - 4 B_{(B}{}^{ADG}\nabla_{|AA'|}\phi_{CF)DG} \\- 8 \phi_{(BC}{}^{AD}\nabla^{G}{}_{|A'|}B_{F)ADG} - 4 \phi_{(B}{}^{ADG}\nabla_{|AA'|}B_{CF)DG}  \\-  \tfrac{1}{3} \phi_{(BC}{}^{AD}\phi_{|AD}{}^{GH}H_{A'|F)GH} -  \tfrac{2}{3} \phi_{(B}{}^{ADG}\phi_{C|AD}{}^{H}H_{A'|F)GH}
+\end{multline}
+We can then derive...
+\begin{equation}
+    \nabla^A{}_{A'}\nabla_{\bm\xi}\phi_{ABCD} = 
+\end{equation}
+
+\subsection{Intrinsic conditions}
+
+We consider $\kappa_{AB}$ defined over $\mathcal{S}$ satisfying
+\begin{subequations}
+\begin{eqnarray}
+      && \tau_{(A}{}^{A'}H_{\vert A'\vert BCD)} \equiv  \mathcal{D}_{(AB}\kappa_{CD)}=0,\\
+      && B_{ABCD}\equiv \kappa_{(A}{}^F\phi_{BCD)F} = 0
+\end{eqnarray}
+\end{subequations}
+on $\mathcal{S}$. We evolve the Killing spinor candidate according to () and the initial condition
+\begin{equation}
+     \mathcal{P} \kappa_{BD} = - \xi_{BD}\label{InitialCondition}
+\end{equation}
+on $\mathcal{S}$, with $\xi_{AB}:=\mathcal{D}_{(A}{}^C\kappa_{B)C}$. Starting from \eqref{IrrDecompCurlOfH}, and performing the decomposition of the covariant derivative, we get
+\[ \nabla_{\bm\tau} H_{B'ABC} + 2 \tau^{D}{}_{B'} \tau^{FA'} \mathcal{D}_{DF}H_{A'ABC} = -12 \Theta \tau^{D}{}_{B'}B_{ABCD} + \tfrac{3}{2} \tau_{(A|B'|}Q_{BC)}\]
+At this point we see that if ()--() hold then $\nabla_{\bm\tau} H_{B'ABC}=0$ on $\mathcal{S}$. Now we move onto $B_{ABCD}$. A similar computation to the twistor case yields
+\begin{equation}
+    \nabla_{\bm\tau} B_{ABCD} = 2 \kappa_{(A}{}^{F}\mathcal{D}_{B}{}^{G}\phi_{CD)FG} + \phi_{(ABC}{}^{F}\xi_{D)F}\label{EvolutionForBuchdahl}
+\end{equation}
+Note that the quantity on the right-hand-side is intrinsic to $\mathcal{S}$; we add it to our list of conditions (for the meantime). Consider now the quantity $F_{A'ABC}$. By definition, $F_{A'ABC}=\nabla^D{}_{A'}B_{ABCD}$ and so, decomposing the covariant derivative
+\[F_{A'BCD} = \tfrac{1}{2} \tau^{A}{}_{A'} \nabla_{\bm\tau} B_{ABCD}  -  \tau^{F}{}_{A'} \mathcal{D}^{A}{}_{F}B_{ABCD}\]
+Hence, given the vanishing of $B_{ABCD}$ and the right-hand-side of \eqref{EvolutionForBuchdahl}, we see that $F_{A'ABC}=0$ on $\mathcal{S}$, too. Thus, all that remains to show is to find intrinsic conditions under which $\nabla_{\bm\tau}F_{A'ABC}=0$ on $\mathcal{S}$. Now, combining our two wave equations for $B_{ABCD}$, namely () and (), we see that 
+\begin{multline}
+     \nabla_{FA'}F^{A'}{}_{BCD} = \tfrac{1}{3} \nabla_{\xi}{}\phi_{BCDF} - 2 \Lambda B_{BCDF} + 3\Theta B_{(BC}{}^{AG}  \phi_{D)FAG}  - 7 \Theta B_{(BC}{}^{AG}\phi_{DF)AG} \\-  \tfrac{1}{4} \phi_{(BCD}{}^{A}Q_{F)A} + \tfrac{1}{3} H^{A'}{}_{(B}{}^{AG}\nabla_{|AA'|}\phi_{CDF)G}\label{CurlOfFInTermsOfCollineation}. 
+\end{multline}
+Decomposing, we have 
+\begin{multline}
+\nabla_{\bm\tau} F_{B'BCD} + 2 \tau^{A}{}_{B'} \tau^{FA'} \mathcal{D}_{AF}F_{A'BCD} = \tfrac{2}{3} \nabla_{\xi}{}\phi_{BCDA} \tau^{A}{}_{B'} - 4 \Lambda  B_{BCDA}\tau^{A}{}_{B'} + 2 \Theta  B_{CD}{}^{FG} \tau^{A}{}_{B'} \phi_{BAFG} \\+ 2 \Theta B_{BD}{}^{FG}  \tau^{A}{}_{B'} \phi_{CAFG} + 2 \Theta B_{BC}{}^{FG}  \tau^{A}{}_{B'} \phi_{DAFG} \\ - 14 \Theta \tau^{A}{}_{B'} B_{(BC}{}^{FG}\phi_{DA)FG}  -  \tfrac{1}{2} \tau^{A}{}_{B'} \phi_{(BCD}{}^{F}Q_{A)F} \\+ \tfrac{2}{3} \tau^{A}{}_{B'} H^{A'}{}_{(B}{}^{FG}\nabla_{|FA'|}\phi_{CDA)G}.
+\end{multline}
+Hence, if $F_{A'ABC}=H_{A,ABC}=B_{ABCD}=0$ on $\mathcal{S}$, then we will also have $\nabla_{\bm\tau}F_{A'ABC}=0$ on $\mathcal{S}$ provided 
+\[ \nabla_{\bm\xi}\phi_{ABCD}=0\]
+on $\mathcal{S}$. Decomposing the covariant derivative, using the evolution equation for rescaled Weyl () along with \eqref{InitialCondition} we have 
+\[ \nabla_{\xi}\phi_{ABCD} =  \xi \mathcal{D}_{D}{}^{F}\phi_{ABCF} + \tfrac{3}{2} \xi^{FG} \mathcal{D}_{FG}\phi_{ABCD} \]
+with $\xi:=\mathcal{D}^{AB}\kappa_{AB}$\mnotex{give decomposition of $\xi_{AA'}$}.  At this point then, we have reduced our initial conditions for the zero quantities to the following set of intrinsic conditions:
+\begin{subequations}
+\begin{eqnarray}
+    && \mathcal{D}_{(AB}\kappa_{CD)}=0,\\
+    && B_{ABCD}\equiv \kappa_{(A}{}^F\phi_{BCD)F}=0,\\
+    && 2 \kappa_{(A}{}^{F}\mathcal{D}_{B}{}^{G}\phi_{CD)FG} + \phi_{(ABC}{}^{F}\xi_{D)F} = 0,\\
+    && \xi^{FG}\mathcal{D}_{FG}\phi_{ABCD} + \tfrac{2}{3}\xi\mathcal{D}_{(A}{}^F\phi_{BCD)F} = 0.
+\end{eqnarray}
+\end{subequations}
+
+\end{document}
