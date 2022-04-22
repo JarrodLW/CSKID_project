@@ -1,0 +1,322 @@
+%%%%%%%
+%%%%%%% Matter Aligment condition
+%%%%%%% 
+%%%%%%% arXiv version.
+%%%%%%%
+%%%%%%%
+%%%%%%% Started on: 11.9.2016
+%%%%%%% Current version: 18.Nov.2021
+%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{latexsym}
+\usepackage{mathrsfs}
+\usepackage{stmaryrd}
+\usepackage[dvips]{epsfig}
+\usepackage{setspace}
+\usepackage{float}
+\usepackage{bm}
+%\usepackage{showkeys}
+%\usepackage[pdftex]{graphicx}
+\usepackage{tikz}
+\usepackage{enumerate}
+\usepackage{subfigure}
+\usepackage{nomencl}
+%\usepackage{makeidx} 
+%\makeindex
+\usepackage{authblk}
+\renewcommand\Affilfont{\itshape\small}
+\usepackage{textcomp}
+\usepackage{scrextend}% add KOMA-Script features to other classes
+\usepackage[toc,page]{appendix}
+\usepackage{comment}
+\usepackage{xcolor}
+
+
+\theoremstyle{plain}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{theorem}{Theorem}
+\newtheorem{assumption}{Assumption}
+\newtheorem*{conjecture}{Conjecture}
+\newtheorem*{subconjecture}{Subconjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem*{main}{Theorem}
+\newtheorem*{definition}{Definition}
+\newtheorem{remark}{Remark}
+
+\setlength{\textwidth}{148mm}           % Width of text on page- max 148
+\setlength{\textheight}{235mm}          % height of text on page-max 235
+\setlength{\topmargin}{-10mm}            % Margin at top ofpage- max -5
+\setlength{\oddsidemargin}{0mm}         % Odd page sidemargin max 15
+\setlength{\evensidemargin}{0mm}
+
+% Underlined lowcase latin letters
+\def\es{{\bar{s}}}
+\def\er{{\bar{r}}}
+
+% Boldface mathmode lowcase latin letters
+\def\bma{{\bm a}}
+\def\bmb{{\bm b}}
+\def\bmc{{\bm c}}
+\def\bmd{{\bm d}}
+\def\bme{{\bm e}}
+\def\bmf{{\bm f}}
+\def\bmg{{\bm g}}
+\def\bmh{{\bm h}}
+\def\bmi{{\bm i}}
+\def\bmj{{\bm j}}
+\def\bmk{{\bm k}}
+\def\bml{{\bm l}}
+\def\bmn{{\bm n}}
+\def\bmm{{\bm m}}
+\def\bmo{{\bm o}}
+\def\bmq{{\bm q}}
+\def\bms{{\bm s}}
+\def\bmt{{\bm t}}
+\def\bmu{{\bm u}}
+\def\bmv{{\bm v}}
+\def\bmw{{\bm w}}
+\def\bmx{{\bm x}}
+\def\bmy{{\bm y}}
+\def\bmz{{\bm z}}
+
+% Boldface mathmode numbers
+\def\bmzero{{\bm 0}}
+\def\bmone{{\bm 1}}
+\def\bmtwo{{\bm 2}}
+\def\bmthree{{\bm 3}}
+
+% Boldface mathmode uppercase latin letters
+\def\bmA{{\bm A}}
+\def\bmB{{\bm B}}
+\def\bmC{{\bm C}}
+\def\bmD{{\bm D}}
+\def\bmE{{\bm E}}
+\def\bmF{{\bm F}}
+\def\bmG{{\bm G}}
+\def\bmH{{\bm H}}
+\def\bmK{{\bm K}}
+\def\bmL{{\bm L}}
+\def\bmM{{\bm M}}
+\def\bmN{{\bm N}}
+\def\bmP{{\bm P}}
+\def\bmQ{{\bm Q}}
+\def\bmR{{\bm R}}
+\def\bmS{{\bm S}}
+\def\bmT{{\bm T}}
+\def\bmX{{\bm X}}
+\def\bmZ{{\bm Z}}
+
+
+\def\Riem{{\bm R}{\bm i}{\bm e}{\bm m}}
+\def\Ric{{\bm R}{\bm i}{\bm c}}
+\def\Weyl{{\bm W}{\bm e}{\bm y}{\bm l}}
+\def\RWeyl{{\bm R}{\bm W}{\bm e}{\bm y}{\bm l}}
+\def\Sch{{\bm S}{\bmc}{\bm h}}
+\def\Schouten{{\bm S}{\bmc}{\bm h}{\bm o}{\bm u}{\bm t}{\bm e}{\bm n}}
+\def\Hessian{{\bm H}{\bm e}{\bm s}{\bm s}}
+
+% Fracture letters
+\def\fraka{{\frak a}}
+\def\frakb{{\frak b}}
+\def\frakc{{\frak c}}
+\def\frakd{{\frak d}}
+\def\frakf{{\frak f}}
+\def\frakg{{\frak g}}
+\def\fraki{{\frak i}}
+\def\frakj{{\frak j}}
+\def\frakk{{\frak k}}
+
+% Mathbf letters
+\def\mbfu{\mathbf{u}}
+
+% Boldface mathmode lowcase greek letters
+\def\bmalpha{{\bm \alpha}}
+\def\bmbeta{{\bm \beta}}
+\def\bmgamma{{\bm \gamma}}
+\def\bmdelta{{\bm \delta}}
+\def\bmepsilon{{\bm \epsilon}}
+\def\bmeta{{\bm \eta}}
+\def\bmzeta{{\bm\zeta}}
+\def\bmxi{{\bm \xi}}
+\def\bmchi{{\bm \chi}}
+\def\bmiota{{\bm \iota}}
+\def\bmomega{{\bm \omega}}
+\def\bmlambda{{\bm \lambda}}
+\def\bmmu{{\bm \mu}}
+\def\bmnu{{\bm \nu}}
+\def\bmphi{{\bm \phi}}
+\def\bmvarphi{{\bm \varphi}}
+\def\bmsigma{{\bm \sigma}}
+\def\bmvarsigma{{\bm \varsigma}}
+\def\bmtau{{\bm \tau}}
+\def\bmupsilon{{\bm \upsilon}}
+
+% Boldface mathmode uppercase greek letters
+\def\bmGamma{{\bm \Gamma}}
+\def\bmPhi{{\bm \Phi}}
+\def\bmUpsilon{{\bm \Upsilon}}
+\def\bmSigma{{\bm \Sigma}}
+
+% Boldface operators
+\def\bmpartial{{\bm \partial}}
+\def\bmnabla{{\bm \nabla}}
+\def\bmhbar{{\bm \hbar}}
+\def\bmperp{{\bm \perp}}
+\def\bmell{{\bm \ell}}
+
+% Complex and real numbers
+\font\SYM=msbm10
+\newcommand{\Real}{\mbox{\SYM R}}
+\newcommand{\Complex}{\mbox{\SYM C}}
+\newcommand{\Natural}{\mbox{\SYM N}}
+\newcommand{\Integer}{\mbox{\SYM Z}}
+\newcommand{\Sphere}{\mbox{\SYM S}}
+
+% ParallelPerp symbol
+\newcommand{\parperp}{\mathbin{\text{\rotatebox[origin=c]{90}{$\models$}}}}
+\newcommand{\perppar}{\mathbin{\text{\rotatebox[origin=c]{-90}{$\models$}}}}
+
+%%%%% for piecewise functions right hand side brace %%%%%
+\newenvironment{rcases}
+  {\left.\begin{aligned}}
+  {\end{aligned}\right\rbrace}
+
+% Projector symbols
+%\newcommand{\proj2perp}{\pi^{\small{\perp}}}
+%\newcommand{\proj2par}{\pi^{\small{\parallel}}}
+%\newcommand{\proj4par}{\pi^{\small{\parallel}}}
+%\newcommand{\proj4parperp}{\pi^{\small{\parperp}}}
+%\newcommand{\proj4perppar}{\pi^{\small{\perppar}}}
+%\newcommand{\proj4perp}{\pi^{\small{\perp}}}
+
+%Counter variable for the margin notes
+\newcounter{mnotecount}%[section]
+
+% This code generates the margin notes
+\newcommand{\mnotex}[1]%{}
+{\protect{\stepcounter{mnotecount}}$^{\mbox{\footnotesize $\bullet$\themnotecount}}$ 
+\marginpar{%\color{red}%
+\raggedright\tiny\em
+$\!\!\!\!\!\!\,\bullet$\themnotecount: #1} }
+
+\renewcommand\labelitemi{\tiny$\bullet$}
+
+\newcommand{\notimplies}{%
+  \mathrel{{\ooalign{\hidewidth$\not\phantom{=}$\hidewidth\cr$\implies$}}}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%% needed for long lists of equations
+\allowdisplaybreaks
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+
+\title{\textbf{Matter alignment condition notes}}
+
+\author[1]{E. Gasper\'in \footnote{E-mail address:{\tt edgar.gasperin@tecnico.ulisboa.pt}}}
+\author[2]{J.L. Williams \footnote{E-mail address:{\tt jlw31@bath.ac.uk}}}
+\affil[1]{CENTRA, Departamento de F\'isica,
+  Instituto Superior T\'ecnico IST, Universidade de Lisboa UL, Avenida
+  Rovisco Pais 1, 1049 Lisboa, Portugal.}
+\affil[2]{Department of Mathematical Sciences, University of Bath, Claverton Down, Bath BA2 7AY, United Kingdom.}
+
+
+
+\maketitle
+\begin{abstract}
+Note on the matter alignment condition
+\end{abstract}
+
+\section{Matter alignment condition}
+
+
+The physical Einstein-Maxwell equations read:
+\[
+\tilde{\Phi}_{ABA'B'}=2\tilde{\phi}_{AB}\bar{\tilde{\phi}}_{A'B'}
+\]
+where $\tilde{\Phi}_{ABA'B'}$ and $\tilde{\phi}_{AB}$ denote
+respectively the physical trace-free Ricci spinor and the physical
+Maxwell spinor.  The physical matter alignment zero-quantity defined as
+\[
+\tilde{\Theta}_{AB}:=2 \tilde{\kappa}_{(A}{}^{Q}\tilde{\phi}_{B)Q}
+\]
+The relation between the physical Killing spinor, the physical Maxwell
+spinor and their unphysical counterparts is given by
+\[
+\kappa_{AB}=\Xi^2\tilde{\kappa}_{AB}, \qquad
+\phi_{AB}=\Xi^{-1}\tilde{\phi}_{AB}
+\]
+Hence, using that the relation between the physical and unphysical
+$\epsilon$ spinors is
+\[
+\epsilon_{AB}=\Xi \tilde{\epsilon}_{AB}, \qquad
+\epsilon^{AB}=\Xi^{-1}\tilde{\epsilon}^{AB}
+\]
+and spinor indices of physical quantities, should be moved using the
+$\tilde{\bm\epsilon}$ spinor one has that
+\[
+\tilde{\kappa}_{A}{}^{Q}=\Xi^{-1}\kappa_{A}{}^Q
+\]
+Hence, the matter alignment condition is conformally invariant, in the
+sense that
+\[
+ \tilde{\kappa}_{(A}{}^{Q}\tilde{\phi}_{B)Q} =
+ \kappa_{(A}{}^{Q}{\phi}_{B)Q}
+ \]
+ This only means that if the physical matter alignment
+ condition is satisfied then $\bm\phi \propto \bm\kappa$.
+ For notational purposes define the unphysical matter alignment condition zero-quantity as
+\[
+\Theta_{AB}:=2 \kappa_{(A}{}^{Q}\phi_{B)Q}
+\]
+Observe that $\Theta_{AB}=0$
+does not  imply that the auxiliary vector $\xi_{AA'}$ is a Killing or conformal
+ Killing vector of $(\mathcal{M},\bmg)$.
+ To see this recall that the conformal
+ transfomation formula for the trace-free Ricci spinor is given by
+ \[
+\tilde{\Phi}_{ABA'B'}=\Phi_{ABA'B'} +
+\Xi^{-1}\nabla_{A(A'}\nabla_{B')B}\Xi
+ \]
+ Defining the shorthand
+  \[
+ S_{AA'BB'} := \nabla_{QA'}H_{B'}{}^{Q}{}_{AB}
+ \]
+ where the auxiliary spinors $\xi_{AA'}$, $Q_{AB}$ and the
+ zero-quantity $H_{A'ABC}$ are as defined as in GasWil22, then a calculation gives
+  \[
+ S_{AA'BB'} = \tfrac{1}{2} Q_{AB}\epsilon _{A'B'}  -
+ \nabla_{AA'}\xi _{BB'} - \nabla_{BB'}\xi _{AA'} -6 \kappa _{(A}{}^{Q} \Phi _{B)QA'B'}  
+ \]
+ Using the conformal transformation law for the trace-free Ricci spinor, and the relation
+ between the pysical Killing spinors gives
+ \[
+\kappa_A{}^{Q}\Phi_{BQA'B'}=\Xi\tilde{\kappa}_{A}{}^Q\tilde{\Phi}_{BQA'B'}-\Xi^{-1}\kappa_{A}{}^Q\nabla_{B(A'}\nabla_{B')Q}\Xi
+\]
+Thus
+%\[
+% \kappa_{(A}{}^{Q}\Phi_{B)QA'B'}=\tfrac{1}{2}\Xi\Theta_{AB}\bar{\tilde{\phi}}_{A'B'}
+%-\Xi^{-1}\kappa_{A}{}^Q\nabla_{B(A'}\nabla_{B')Q}\Xi
+%\]
+\[
+\kappa_{(A}{}^{Q}\Phi_{B)QA'B'}=\Theta_{AB}\bar{\phi}_{A'B'}-\Xi^{-1}\kappa_{(A}{}^Q\nabla_{B)(A'}\nabla_{B')Q}\Xi
+\]
+Altogether
+  \[
+ S_{AA'BB'} = \tfrac{1}{2} Q_{AB}\epsilon _{A'B'} -6 \Theta_{AB}\bar{\phi}_{A'B'}  -
+ \nabla_{AA'}\xi _{BB'} - \nabla_{BB'}\xi _{AA'}  + 6 \Xi^{-1}\kappa_{(A}{}^Q\nabla_{B)(A'}\nabla_{B')Q}\Xi
+ \]
+ Thus even when the unphysical matter alignment condition $\Theta_{AB}=0$ and the
+ Killing spinor equation $H_{A'ABC}=0$ is satisfied (and hence their concomitants $Q_{AB}=0$ and $S_{AA'BB'}=0$) the auxiliary vector $\xi_{AA'}$ is not a Killing nor a conformal Killing vector of $(\mathcal{M}, \bmg)$.
+ 
+
+
+
+\end{document}
