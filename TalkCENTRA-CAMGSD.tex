@@ -712,7 +712,7 @@ Riemann $\rightarrow$ Weyl, \;\;\;tracefree Ricci, \;\;\; Ricci scalar.
 \vspace{-5mm}
 \begin{block}{Killing spinor}
   \begin{itemize}
-  \item EFE $\tilde{R}_{ab}=\lambda\tilde{g}_{ab}$ $\implies$ $\tilde{\Phi}_{AA'BB'}=0$
+  \item EFE: $\tilde{R}_{ab}=\lambda\tilde{g}_{ab}$ $\implies$ $\tilde{\Phi}_{AA'BB'}=0$
   \item $ \tilde{\nabla}_{A'(A}\tilde{\kappa}_{BC)}=0$
   \item $\tilde{\xi}_{a} \mapsto \tilde{\xi}_{AA'}:= \tilde{\nabla}^{B}{}_{A'}\tilde{\kappa}_{AB}$
     is a KV if EFE hold.
@@ -731,9 +731,12 @@ Riemann $\rightarrow$ Weyl, \;\;\;tracefree Ricci, \;\;\; Ricci scalar.
 \end{subequations}
 \vspace{-6mm}
 \begin{itemize}
-\item $\exists$ KS  $\tilde{\kappa}_{AB}$ on  $(\tilde{\mathcal{M}},\tilde{\bmg})$  $\iff$
+\item $\exists$ Killing spinor %$\tilde{\kappa}_{AB}$
+  %on  $(\tilde{\mathcal{M}},\tilde{\bmg})$
+  $\iff$
   $\tilde{H}_{A'ABC}=0$.
 \end{itemize}
+\pause
 \begin{multline*}\tilde{S}_{AA'BB'} = \tilde{\nabla}_{AA'}\tilde{\xi}_{BB'} +
   \tilde{\nabla}_{BB'}\tilde{\xi}_{AA'} \\ + 6\tilde{\kappa}_{(A}{}^{Q}\color{red}{\tilde{\Phi}}_{B)QA'B'}.
 \end{multline*}
@@ -884,7 +887,7 @@ satisfies the \textbf{Unphysical Killing vector equations}
 \vspace{-5mm}
 \end{exampleblock}
 \vspace{-3mm}
-%\pause
+\pause
 \begin{columns}[c]
 \column{5.5cm}
 \begin{block}{ CKID: The conformal Killing vector initial data equations (Paetz 14)}
@@ -893,9 +896,10 @@ satisfies the \textbf{Unphysical Killing vector equations}
   \item  KID's on spacelike conformal boundaries $\mathscr{I}$ 
  % \item KID's on a spacelike 
   \end{itemize}
-\end{block}
+  \end{block}
 \includegraphics[width=1.00\textwidth]{figs/SdSIDphysical.pdf}
- \put(-80,25){\large{$\color{black}\tilde{\Sigma}$}}
+\put(-80,25){\large{$\color{black}\tilde{\Sigma}$}}
+
 %\vspace{-3mm}
 %\pause
 \column{5.5cm}
@@ -919,16 +923,23 @@ satisfies the \textbf{Unphysical Killing vector equations}
 \begin{block}{ Killing spinors and conformal transformations}
   \begin{itemize}
   \item KS are
-    conf. inv. $\tilde{\nabla}_{A'(A}\tilde{\kappa}_{BC)}=0$
-    $\implies$ $\nabla_{A'(A}\kappa_{BC)}=0$ with
+    conf. inv.
+     $\tilde{\nabla}_{A'(A}\tilde{\kappa}_{BC)}=0$
+    $\implies$ $\nabla_{A'(A}\kappa_{BC)}=0$
+    with
     $\kappa_{AB}=\Omega^2\tilde{\kappa}_{AB}$.
-    \item But proof in $(\tilde{\mathcal{M}},\tilde{\bmg})$ doesn't
-      apply to $(\mathcal{M},\bmg)$ !
+  \end{itemize}
+\end{block}
+\pause
+\vspace{-3mm}
+\begin{alertblock}{Why proof doesn't work in conformal?!}
+  \begin{itemize}
+        %\item but ... %proof $(\mathcal{M},\bmg)$ doesn't work !
    \item The EFE are \textbf{not} conf. inv.
    \item $\xi_{a} \mapsto \xi_{AA'}:= \nabla^{B}{}_{A'}\kappa_{AB}$ is
      \textbf{not} a (C)KV.
   \end{itemize}
-  \end{block}
+  \end{alertblock}
 \vspace{-4mm}
 \pause
 \begin{exampleblock}{Zero-quantities?}
@@ -1081,7 +1092,7 @@ satisfies the \textbf{Unphysical Killing vector equations}
   \begin{columns}
     \column{6.0cm}
     \vspace{-4mm}
-    \begin{exampleblock}{Weyl collineation}
+    \begin{exampleblock}{Corollary: Weyl collineation}
       \begin{itemize}
        \item  If $(\mathcal{M},\bmg)$ is a conformally Einstein manifold
        \item $\xi_{a} \mapsto \xi_{AA'}:= \nabla^{B}{}_{A'}\kappa_{AB}$ is a
