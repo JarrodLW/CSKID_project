@@ -390,7 +390,7 @@ Curvature spinors:\\
 Riemann $\rightarrow$ Weyl, \;\;\;tracefree Ricci, \;\;\; Ricci scalar.
 \end{center}
 \[
-\Psi_{ABCD}, \qquad \Phi_{ABA'B'}, \qquad \Lambda
+\Psi_{ABCD}, \qquad \Phi_{ABA'B'}, \qquad R
 \]
 %\[
 %C_{AA'BB'CC'DD'}=\bar{\Psi}_{A'B'C'D'}\epsilon_{AB}\epsilon_{CD}+\Psi_{ABCD}\epsilon_{A'B'}\epsilon_{C'D'}
@@ -812,13 +812,71 @@ $g_{ab}$.
 
 
 %%%%%%%%%%%
+%% \begin{frame}{The conformal Einstein field equations (H. Friedrich 81)}
+%%   \vspace{3mm}
+%% \begin{columns}[c]
+%%   \column{5.5cm}
+%%   Equations:
+%%   \vspace{-3mm}
+%% \begin{flalign*}
+%% & {\nabla}_a {\nabla}_b \Omega = - \Omega {L}_{ab} + s g_{ab}, & \\
+%% & {\nabla}_a s = -{L}_{ac} \nabla^c \Omega, \\
+%%   & {\nabla}_c {L}_{db} - \nabla_d {L}_{cb}
+%%   =d^a{}_{bcd} \nabla_a \Omega , & \\
+%%   & {\nabla}_a d^a{}_{bcd} =0, &
+%% \end{flalign*}
+%% \column{5.5cm}
+%% \vspace{-2mm}
+%% \begin{flalign*}
+%%   & \text{Fields:} \quad (\Omega, s, L_{ab}, d^a{}_{bcd}) \\
+%% & {L}_{ab} := \tfrac{1}{2} {R}_{ab}-\tfrac{1}{12} {R} {g}_{ab},
+%% \hspace{2mm}  \mbox{\footnotesize{(Schouten tensor)}} \\
+%% & s := \tfrac{1}{4} {\nabla}_a {\nabla}^a \Omega + \tfrac{1}{24}{R}\Omega,
+%% \hspace{2mm} \mbox{\footnotesize{(Friedrich scalar)}} \\
+%%   & d^a{}_{bcd} := \Omega^{-1} C^a{}_{bcd}.
+%%   \hspace{2mm} \mbox{\footnotesize{(Rescaled  Weyl tensor)}}
+%%    %& 6 \Omega s - 3\nabla_c \Omega \nabla^c \Omega =\lambda &
+%% \end{flalign*}
+%% \end{columns}
+%% \vspace{3mm}
+%% \begin{itemize}
+%%   \vspace{-8mm}
+%%    \pause
+%% \end{itemize}
+%% \begin{block}{Key equation: Rescaled Weyl spinor}
+%%   \begin{itemize}
+%%     \vspace{-2mm}
+%%     \begin{align}
+%%      & \nabla^{AA'} \underbrace{(\Omega^{-1}\Psi_{ABCD})}_{\phi_{ABCD}
+%% \;\;\text{\tiny{rescaled Weyl spinor}}}
+%%       = \Omega^{-1}\tilde{\nabla}^{AA'}  \Psi_{ABCD}
+%% \underbrace{=0}_{\text{vaccum}\;\; \tilde{\Phi}=0} \nonumber \\
+%%     & \boxed{\nabla^{AA'}\phi_{ABCD}=0} \qquad \qquad \Phi_{ABA'B'}
+%% \neq 0 \qquad \text{($\Phi$ sats diff eq)} \nonumber 
+%%     \end{align}
+%%   \end{itemize}
+%% \end{block}
+%% \vspace{-5mm}
+%% \begin{exampleblock}{Applications}
+%%   \begin{itemize}
+%%     \item Potentially turn {\bf{\emph{global}}} problems into {\bf{\emph{local}}} ones.
+%%   \item $\mathscr{I}$ ($\Omega=0$) legit hypersurface to prescribe ID: Asympt.
+%% initial value problem. 
+%%     \end{itemize}
+%%   \end{exampleblock}
+%% \end{frame}
+%%%%%%%%%%%
+
+
+%%%%%%%%%%%
 
 %\end{aligned*}
 \begin{frame}{The conformal Einstein field equations (H. Friedrich 81)}
   \vspace{3mm}
-\begin{columns}[c]
+  \begin{columns}[c]
+    \onslide<1>
   \column{5.5cm}
-  Equations:
+   Equations:
   \vspace{-3mm}
 \begin{flalign*}
 %\begin{aligned*}
@@ -827,25 +885,22 @@ $g_{ab}$.
   & {\nabla}_c {L}_{db} - \nabla_d {L}_{cb}
   =d^a{}_{bcd} \nabla_a \Omega , & \\
   & {\nabla}_a d^a{}_{bcd} =0, &
- %\end{aligned*}
 \end{flalign*}
 \column{5.5cm}
 \vspace{-2mm}
 \begin{flalign*}
-  %\begin{aligned*}
   & \text{Fields:} \quad (\Omega, s, L_{ab}, d^a{}_{bcd}) \\
 & {L}_{ab} := \tfrac{1}{2} {R}_{ab}-\tfrac{1}{12} {R} {g}_{ab}, \hspace{2mm}  \mbox{\footnotesize{(Schouten tensor)}} \\
 & s := \tfrac{1}{4} {\nabla}_a {\nabla}^a \Omega + \tfrac{1}{24}{R}\Omega, \hspace{2mm} \mbox{\footnotesize{(Friedrich scalar)}} \\
-  & d^a{}_{bcd} := \Omega^{-1} C^a{}_{bcd}.  \hspace{2mm} \mbox{\footnotesize{(Rescaled  Weyl tensor)}}
+  & d^a{}_{bcd} := \Omega^{-1} C^a{}_{bcd}.
+  \hspace{2mm} \mbox{\footnotesize{(Rescaled  Weyl tensor)}}
    %& 6 \Omega s - 3\nabla_c \Omega \nabla^c \Omega =\lambda &
 \end{flalign*}
 \end{columns}
 \vspace{3mm}
 \begin{itemize}
-  %\item  $$
   \vspace{-8mm}
-%\item  Key equation: Rescaled Weyl spinor%No equation for $R$: Conformal gauge source function
-%   \pause
+\onslide<2>
 \end{itemize}
 \begin{block}{Key equation: Rescaled Weyl spinor}
   \begin{itemize}
@@ -855,11 +910,6 @@ $g_{ab}$.
       = \Omega^{-1}\tilde{\nabla}^{AA'}  \Psi_{ABCD}  \underbrace{=0}_{\text{vaccum}\;\; \tilde{\Phi}=0} \nonumber \\
     & \boxed{\nabla^{AA'}\phi_{ABCD}=0} \qquad \qquad \Phi_{ABA'B'} \neq 0 \qquad \text{($\Phi$ sats diff eq)} \nonumber 
     \end{align}
- % \item Write $\bar{R}_{\mu\nu}$
-    %   as second derivatives of the unphysical metric $\bar{g}_{ab}$.
-    %\vspace{-5mm}
-    % \item Frame approach: Use Cartan  structure equations.
-    % Introduce: $\bme_{\bma}$, $\Gamma_{\bma}{}^{\bmc}{}_{\bmb}$
   \end{itemize}
 \end{block}
 \vspace{-5mm}
@@ -871,6 +921,10 @@ $g_{ab}$.
   \end{exampleblock}
 \end{frame}
 %%%%%%%%%%%
+
+
+
+
 
 \begin{frame}
   \frametitle{Combining these ideas?}
@@ -887,21 +941,17 @@ satisfies the \textbf{Unphysical Killing vector equations}
 \vspace{-5mm}
 \end{exampleblock}
 \vspace{-3mm}
-\pause
 \begin{columns}[c]
-\column{5.5cm}
+  \column{5.5cm}
 \begin{block}{ CKID: The conformal Killing vector initial data equations (Paetz 14)}
   \begin{itemize}
   \item Field equations: CEFE.
   \item  KID's on spacelike conformal boundaries $\mathscr{I}$ 
  % \item KID's on a spacelike 
   \end{itemize}
-  \end{block}
+\end{block}
 \includegraphics[width=1.00\textwidth]{figs/SdSIDphysical.pdf}
 \put(-80,25){\large{$\color{black}\tilde{\Sigma}$}}
-
-%\vspace{-3mm}
-%\pause
 \column{5.5cm}
 \includegraphics[width=1.00\textwidth]{figs/SdSIDunphysical.pdf}
 \put(-54,-12){\large{$\color{black}\Sigma=\mathscr{I}$}}
